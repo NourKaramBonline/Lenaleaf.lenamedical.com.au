@@ -15,66 +15,90 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       <section className="home-hero bg-gray-100">
-        <div className="px-6 py-16 mx-auto max-w-7xl lg:py-24 grid items-center gap-10 lg:grid-cols-2">
-          <div className="space-y-6">
-            <p className="text-sm font-semibold tracking-wide uppercase" style={{ color: "#e9762b" }}>
-              Lena Medical
-            </p>
-            <h1
-              className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
-              style={{ color: "#19b4bc" }}
-            >
-              LENA Leaf
-            </h1>
-            <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
-              LENA Leaf is a dedicated service from Lena Medical, designed to make high-quality
-              telehealth more accessible, convenient, and patient-centred. Connect with
-              qualified clinicians online, from the comfort of your home.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <button
-                className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white rounded-full transition-colors"
-                style={{ backgroundColor: "#19b4bc" }}
-              >
-                Book a LENA Leaf consult
-              </button>
-              <button
-                className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border rounded-full transition-colors"
-                style={{
-                  borderColor: "#19b4bc",
-                  color: "#19b4bc",
-                }}
-              >
-                Learn more
-              </button>
-            </div>
-            <p className="text-xs text-slate-500">
-              * Final copy, colours, and animations will be aligned exactly with the main Lena
-              Medical site.
-            </p>
-          </div>
+        <div className="px-6 py-16 mx-auto max-w-7xl lg:py-24">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-3 rounded-full bg-white/80 px-4 py-1.5 shadow-sm ring-1 ring-black/5">
+                <span
+                  className="text-[11px] font-semibold tracking-[0.16em] uppercase"
+                  style={{ color: "#e9762b" }}
+                >
+                  Telehealth Service
+                </span>
+                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#19b4bc" }} />
+                <span className="text-[11px] font-medium text-slate-600 uppercase tracking-[0.16em]">
+                  LENA Leaf
+                </span>
+              </div>
 
-          <div
-            className="relative h-64 overflow-hidden rounded-3xl lg:h-80"
-            style={{
-              background: "linear-gradient(135deg, #19b4bc1a, #e9762b1a)",
-            }}
-          >
-            <div className="absolute inset-0" aria-hidden="true">
-              <div
-                className="absolute w-40 h-40 rounded-full blur-3xl opacity-60 -top-10 -left-6"
-                style={{ backgroundColor: "#19b4bc" }}
-              />
-              <div
-                className="absolute w-52 h-52 rounded-full blur-3xl opacity-50 -bottom-10 -right-10"
-                style={{ backgroundColor: "#e9762b" }}
-              />
+              <div className="space-y-5">
+                <h1
+                  className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-[3.2rem] lg:leading-tight"
+                  style={{ color: "#19b4bc" }}
+                >
+                  Natural telehealth support
+                  <span className="block" style={{ color: "#e9762b" }}>
+                    with LENA Leaf
+                  </span>
+                </h1>
+                <p className="max-w-2xl text-sm leading-relaxed text-slate-700 sm:text-base">
+                  LENA Leaf brings Lena Medical&apos;s telehealth expertise together with natural
+                  and holistic health solutions. Designed for eligible patients who want safe,
+                  convenient care without leaving home.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-4">
+                <button
+                  className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold text-white rounded-full shadow-sm transition-transform duration-150 hover:scale-[1.02] cursor-pointer"
+                  style={{ backgroundColor: "#19b4bc" }}
+                >
+                  Book a LENA Leaf consult
+                </button>
+                <button
+                  className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold rounded-full bg-white shadow-sm ring-1 ring-inset transition-colors duration-150 hover:bg-orange-50 cursor-pointer"
+                  style={{
+                    borderColor: "#e9762b",
+                    color: "#e9762b",
+                  }}
+                >
+                  Learn more about eligibility
+                </button>
+              </div>
+
+              <div className="flex flex-wrap gap-6 text-xs text-slate-600 sm:text-[13px]">
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-teal-50" style={{ borderColor: "#19b4bc" }}>
+                    <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "#19b4bc" }} />
+                  </span>
+                  <span>Bulk-billed for eligible patients</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-50">
+                    <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "#e9762b" }} />
+                  </span>
+                  <span>Secure, online consultations</span>
+                </div>
+              </div>
             </div>
-            <div className="relative flex items-center justify-center h-full px-6">
-              <p className="text-sm font-medium leading-relaxed text-center text-emerald-900 sm:text-base">
-                This area will be replaced with the official Lena Leaf artwork, logo and
-                illustration, matching the main site design.
-              </p>
+
+            <div className="relative flex items-center justify-center">
+              <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full blur-3xl opacity-50" style={{ backgroundColor: "#19b4bc55" }} />
+              <div className="absolute -bottom-12 -left-16 h-52 w-52 rounded-full blur-3xl opacity-50" style={{ backgroundColor: "#e9762b55" }} />
+
+              <div className="relative w-full max-w-md overflow-hidden rounded-[32px] bg-white shadow-xl ring-1 ring-black/5">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <video
+                    className="h-full w-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls={false}
+                    src="/lena-medical/home-hero.mp4"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
