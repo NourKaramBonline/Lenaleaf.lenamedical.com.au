@@ -42,7 +42,57 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <>
+      <header className="sticky top-0 z-40 border-b border-slate-100 bg-white">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
+          <a href="/" className="flex items-center gap-3">
+            <img
+              src="/icon/logo-transparent.png"
+              alt="LENA Leaf logo"
+              className="h-10 w-auto object-contain md:h-12 transform scale-150"
+            />
+          </a>
+
+          <div className="flex items-center gap-8">
+            <div className="hidden items-center gap-3 text-[15px] font-medium md:flex">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About Us" },
+                { href: "/services", label: "Services" },
+                { href: "/contact", label: "Contact Us" },
+              ].map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="group relative px-4 py-2 text-[15px] text-[rgb(12,122,136)] transition-colors duration-150 hover:text-[color:#19b4bc]"
+                >
+                  <span className="relative z-10 inline-block transition-transform duration-150 group-hover:-translate-y-0.5">
+                    {link.label}
+                  </span>
+                  <span
+                    className="pointer-events-none absolute inset-x-3 -bottom-0.5 h-[2px] origin-center scale-x-0 rounded-full bg-[color:#19b4bc] transition-transform duration-200 ease-out group-hover:scale-x-100"
+                  />
+                </a>
+              ))}
+            </div>
+
+            <a
+              href="https://lenamedical.com.au/appointments/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
+              style={{ backgroundColor: "#e9762b" }}
+            >
+              Book Appointment
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <Outlet />
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

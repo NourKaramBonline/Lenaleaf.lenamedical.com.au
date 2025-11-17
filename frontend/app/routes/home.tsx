@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       <section className="home-hero bg-gray-100">
-        <div className="px-6 py-16 mx-auto max-w-7xl lg:py-24">
+        <div className="px-6 pt-10 pb-16 mx-auto max-w-7xl lg:pt-14 lg:pb-20">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-3 rounded-full bg-white/80 px-4 py-1.5 shadow-sm ring-1 ring-black/5">
