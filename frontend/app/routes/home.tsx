@@ -104,48 +104,68 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="why-lena-leaf px-6 pb-16 mx-auto max-w-7xl space-y-10">
-        <div className="space-y-4">
+      <section className="why-lena-leaf px-6 pb-20 mx-auto mt-12 max-w-7xl">
+        <div className="space-y-3 max-w-xl">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">
+            Why choose
+            <span className="ml-1" style={{ color: "#e9762b" }}>
+              LENA Leaf
+            </span>
+          </p>
           <h2
-            className="text-2xl font-semibold tracking-tight"
-            style={{ color: "#e9762b" }}
+            className="text-2xl font-semibold tracking-tight sm:text-3xl"
+            style={{ color: "#19b4bc" }}
           >
-            Why LENA Leaf?
+            Telehealth designed around natural health
           </h2>
           <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
-            This new subdomain focuses exclusively on LENA Leaf, giving patients a clear,
-            streamlined way to understand the service, explore eligibility, and book online
-            appointments.
+            This dedicated experience makes it easier for patients to understand what LENA
+            Leaf offers, check whether they&apos;re eligible, and book the right appointment
+            without getting lost in a general medical website.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          <article className="p-5 border rounded-2xl border-slate-100 shadow-sm">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <article className="group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md">
+            <div className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-teal-50" style={{ borderColor: "#19b4bc" }}>
+              <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#19b4bc" }} />
+            </div>
             <h3 className="mb-2 text-sm font-semibold" style={{ color: "#19b4bc" }}>
-              Telehealth-first experience
+              Built for online care
             </h3>
             <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-              Crafted for online consultations from the ground up, with clear pathways for
-              booking and follow-up.
+              Clear, mobile-friendly flows for learning about LENA Leaf and booking telehealth
+              consults from any device.
             </p>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }} />
           </article>
-          <article className="p-5 border rounded-2xl border-slate-100 shadow-sm">
+
+          <article className="group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md">
+            <div className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-orange-50">
+              <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#e9762b" }} />
+            </div>
             <h3 className="mb-2 text-sm font-semibold" style={{ color: "#19b4bc" }}>
-              Integrated with Lena Medical
+              Clearly linked to Lena Medical
             </h3>
             <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-              Built as an extension of the main Lena Medical site while focusing solely on
-              Lena Leaf services.
+              Shares the same branding, tone and trust as Lena Medical, while focusing the
+              content purely on LENA Leaf services.
             </p>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(90deg, #e9762b, #19b4bc)" }} />
           </article>
-          <article className="p-5 border rounded-2xl border-slate-100 shadow-sm">
+
+          <article className="group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md">
+            <div className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-50">
+              <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#19b4bc" }} />
+            </div>
             <h3 className="mb-2 text-sm font-semibold" style={{ color: "#19b4bc" }}>
-              Future-ready design
+              Ready for future sections
             </h3>
             <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-              Structured to reuse logos, colours, fonts, and animations from the existing Next.js
-              implementation without depending on Next-specific APIs.
+              Structured so you can add more LENA Leaf information, FAQs and pathways later
+              without redesigning the page.
             </p>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #19b4bc)" }} />
           </article>
         </div>
       </section>
