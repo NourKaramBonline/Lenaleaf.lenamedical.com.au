@@ -266,9 +266,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="faq px-6 pb-20 mx-auto max-w-7xl">
+      <section className="faq px-6 pb-20 mx-auto mt-12 max-w-7xl">
         <div className="space-y-3 max-w-2xl">
           <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">
+            <span></span>
+            <span className="mx-1" style={{ color: "#e9762b" }}>
+              LENA Leaf
+            </span>
             FAQ
           </p>
           <h2
@@ -300,13 +304,26 @@ export default function Home() {
           ].map((item, idx) => (
             <details
               key={item.q}
-              className="group rounded-2xl bg-white/90 p-4 shadow-sm ring-1 ring-slate-100 transition-colors duration-150 open:bg-white"
+              className="group relative overflow-hidden rounded-3xl bg-white/95 p-4 pl-5 shadow-sm ring-1 ring-slate-100 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md open:bg-white"
             >
-              <summary className="flex cursor-pointer items-center justify-between gap-3 text-sm font-semibold text-[rgb(12,122,136)]">
-                <span>{item.q}</span>
+              <div
+                className="pointer-events-none absolute inset-x-4 top-0 h-[3px] rounded-b-full"
+                style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }}
+              />
+
+              <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold text-[rgb(12,122,136)]">
                 <span
-                  className="ml-2 flex h-5 w-5 items-center justify-center rounded-full text-xs font-semibold text-white transition-transform duration-150 group-open:rotate-45"
-                  style={{ backgroundColor: idx === 1 ? "#e9762b" : "#19b4bc" }}
+                  className="pr-4 leading-snug"
+                  style={idx === 1 ? { color: "#e9762b" } : undefined}
+                >
+                  {item.q}
+                </span>
+                <span
+                  className="ml-auto flex h-6 w-6 items-center justify-center rounded-full border text-xs font-semibold text-white shadow-sm transition-transform duration-150 group-open:rotate-45"
+                  style={{
+                    backgroundColor: idx === 1 ? "#e9762b" : "#19b4bc",
+                    borderColor: "#ffffff",
+                  }}
                 >
                   +
                 </span>
