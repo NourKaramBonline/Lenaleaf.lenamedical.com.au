@@ -319,7 +319,7 @@ export default function Home() {
                   {item.q}
                 </span>
                 <span
-                  className="ml-auto flex h-6 w-6 items-center justify-center rounded-full border text-xs font-semibold text-white shadow-sm transition-transform duration-150 group-open:rotate-45"
+                  className="ml-auto inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-xs font-semibold text-white shadow-sm transition-transform duration-150 group-open:rotate-45"
                   style={{
                     backgroundColor: idx === 1 ? "#e9762b" : "#19b4bc",
                     borderColor: "#ffffff",
