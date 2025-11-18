@@ -13,3 +13,12 @@ body {
     color-scheme: dark;
   }
 }
+
+.footer-link {
+  color: rgb(12, 122, 136);
+  transition: color 150ms ease-out;
+}
+
+.footer-link:hover {
+  color: #19b4bc;
+}

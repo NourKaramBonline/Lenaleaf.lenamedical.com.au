@@ -91,6 +91,119 @@ export default function App() {
       </header>
 
       <Outlet />
+
+      <footer className="border-t border-slate-100 bg-slate-100">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-10 md:flex-row md:items-start md:justify-between">
+          <div className="space-y-4 max-w-sm">
+            <div className="flex items-center gap-3">
+              <img
+                src="/icon/logo-transparent.png"
+                alt="LENA Leaf logo"
+                className="h-14 w-auto object-contain md:h-16"
+              />
+              
+            </div>
+            <p className="text-xs leading-relaxed text-slate-500">
+              LENA Leaf is a dedicated telehealth service by Lena Medical, helping eligible
+              patients access natural and holistic health support online.
+            </p>
+          </div>
+
+          <div className="grid flex-1 gap-8 text-sm text-[rgb(12,122,136)] sm:grid-cols-2 md:grid-cols-3">
+            <div className="space-y-3">
+              <h3 className="text-xs font-semibold tracking-[0.16em] uppercase" style={{ color: "#e97625" }}>
+                Site
+              </h3>
+              <ul className="space-y-1.5">
+                <li>
+                  <a href="/" className="footer-link">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/about" className="footer-link">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="/services" className="footer-link">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="footer-link">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="text-xs font-semibold tracking-[0.16em] uppercase" style={{ color: "#e97625" }}>
+                Lena Medical
+              </h3>
+              <ul className="space-y-1.5">
+                <li>
+                  <a
+                    href="https://lenamedical.com.au/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="footer-link"
+                  >
+                    Main website
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://lenamedical.com.au/appointments/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="footer-link"
+                  >
+                    Book appointment
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="text-xs font-semibold tracking-[0.16em] uppercase" style={{ color: "#e97625" }}>
+                Support
+              </h3>
+              <ul className="space-y-1.5 text-xs">
+                <li>Available Australia-wide via telehealth.</li>
+                <li>Always follow medical advice from your clinician.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-slate-200 bg-slate-100">
+          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-4 text-[11px] text-[rgb(12,122,136)] sm:flex-row">
+            <span>
+              © {new Date().getFullYear()} Lena Medical. All rights reserved.
+            </span>
+            <span className="flex gap-4">
+              <a
+                href="https://lenamedical.com.au/privacy-policy/"
+                target="_blank"
+                rel="noreferrer"
+                className="footer-link"
+              >
+                Privacy
+              </a>
+              <a
+                href="https://lenamedical.com.au/terms-and-conditions/"
+                target="_blank"
+                rel="noreferrer"
+                className="footer-link"
+              >
+                Terms
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
