@@ -169,6 +169,195 @@ export default function Home() {
           </article>
         </div>
       </section>
+
+      <section
+        className="how-lenaleaf-works w-full py-16"
+        style={{ backgroundColor: "#edf8f9" }}
+      >
+        <div className="px-6 mx-auto max-w-7xl">
+          <div className="space-y-3 max-w-2xl">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">
+            How
+            <span className="mx-1" style={{ color: "#e9762b" }}>
+              LENA Leaf
+            </span>
+            works
+          </p>
+          <h2
+            className="text-2xl font-semibold tracking-tight sm:text-3xl"
+            style={{ color: "#19b4bc" }}
+          >
+            A simple path to natural telehealth support
+          </h2>
+          <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
+            From checking eligibility through to your online consult, LENA Leaf is designed to
+            guide you step-by-step so you know what to expect at every stage.
+          </p>
+          </div>
+
+          <ol className="mt-10 grid gap-8 md:gap-12 md:grid-cols-4">
+          {["Check eligibility", "Choose your time", "Join your consult", "Follow-up & next steps"].map((title, index) => (
+            <li
+              key={title}
+              className="group relative flex h-full flex-col overflow-visible rounded-3xl bg-white/95 p-5 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+            >
+              <div className="absolute inset-x-4 top-0 h-1 rounded-b-full" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }} />
+
+              <div className="mb-4 flex items-center justify-between gap-3 pt-1">
+                <div className="inline-flex flex-col text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">
+                  <span>Step {index + 1}</span>
+                </div>
+                <div
+                  className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-semibold text-white shadow-sm"
+                  style={{ backgroundColor: "#e9762b" }}
+                >
+                  {index + 1}
+                </div>
+              </div>
+              {index < 3 && (
+                <>
+                  {/* Desktop / tablet horizontal connector */}
+                  <div className="pointer-events-none absolute right-[-40px] top-1/2 hidden -translate-y-1/2 items-center md:flex z-20">
+                    <div
+                      className="h-px w-12 rounded-full"
+                      style={{ backgroundColor: "rgba(25,180,188,0.3)" }}
+                    />
+                    <div
+                      className="ml-1 flex h-7 w-7 items-center justify-center rounded-full border shadow-sm"
+                      style={{ backgroundColor: "#19b4bc", borderColor: "#ffffff" }}
+                    >
+                      <span className="text-sm font-semibold text-white">›</span>
+                    </div>
+                  </div>
+
+                  {/* Mobile vertical connector */}
+                  <div className="pointer-events-none absolute inset-x-0 -bottom-7 flex flex-col items-center justify-center md:hidden z-20">
+                    <div
+                      className="h-6 w-px rounded-full"
+                      style={{ backgroundColor: "rgba(25,180,188,0.3)" }}
+                    />
+                    <div
+                      className="-mb-3 mt-1 flex h-7 w-7 items-center justify-center rounded-full border shadow-sm bg-white"
+                      style={{ borderColor: "#19b4bc" }}
+                    >
+                      <span className="text-base font-semibold" style={{ color: "#19b4bc" }}>
+                        ↓
+                      </span>
+                    </div>
+                  </div>
+                </>
+              )}
+              <h3 className="mb-2 text-sm font-semibold" style={{ color: "#19b4bc" }}>
+                {title}
+              </h3>
+              <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
+                {index === 0 &&
+                  "Answer a few quick questions to confirm that LENA Leaf telehealth is suitable for you."}
+                {index === 1 &&
+                  "Select a telehealth appointment time that works for you, from the comfort of your home."}
+                {index === 2 &&
+                  "Join your secure video consult on your phone, tablet or computer and speak with a clinician."}
+                {index === 3 &&
+                  "Receive guidance on next steps, including any follow-up appointments or recommendations."}
+              </p>
+            </li>
+          ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="faq px-6 pb-20 mx-auto max-w-7xl">
+        <div className="space-y-3 max-w-2xl">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">
+            FAQ
+          </p>
+          <h2
+            className="text-2xl font-semibold tracking-tight sm:text-3xl"
+            style={{ color: "#19b4bc" }}
+          >
+            Questions about LENA Leaf
+          </h2>
+          <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
+            Here are some quick answers about how the service works. This content can be updated
+            later with more detailed FAQs from the main site.
+          </p>
+        </div>
+
+        <div className="mt-8 space-y-4">
+          {[ 
+            {
+              q: "Do I need to be an existing Lena Medical patient?",
+              a: "You don&apos;t necessarily need to be an existing patient, but eligibility and availability may depend on your location and the type of support you&apos;re seeking."
+            },
+            {
+              q: "Is LENA Leaf bulk-billed?",
+              a: "Bulk-billing and fees depend on your eligibility and the type of consult. The booking journey will clearly show any costs before you confirm your appointment."
+            },
+            {
+              q: "What do I need for my telehealth appointment?",
+              a: "You&apos;ll need a quiet, private space, a reliable internet connection and a device with a camera and microphone, such as a smartphone, tablet or computer."
+            }
+          ].map((item, idx) => (
+            <details
+              key={item.q}
+              className="group rounded-2xl bg-white/90 p-4 shadow-sm ring-1 ring-slate-100 transition-colors duration-150 open:bg-white"
+            >
+              <summary className="flex cursor-pointer items-center justify-between gap-3 text-sm font-semibold text-[rgb(12,122,136)]">
+                <span>{item.q}</span>
+                <span
+                  className="ml-2 flex h-5 w-5 items-center justify-center rounded-full text-xs font-semibold text-white transition-transform duration-150 group-open:rotate-45"
+                  style={{ backgroundColor: idx === 1 ? "#e9762b" : "#19b4bc" }}
+                >
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 text-xs leading-relaxed text-slate-700 sm:text-sm">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="testmonial px-6 pb-24 mx-auto max-w-7xl">
+        <div className="grid gap-8 rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-slate-100 md:grid-cols-[1.2fr_minmax(0,1fr)]">
+          <div className="space-y-4">
+            <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">
+              Patient experience
+            </p>
+            <h2
+              className="text-2xl font-semibold tracking-tight sm:text-3xl"
+              style={{ color: "#19b4bc" }}
+            >
+              Designed to feel personal, even online
+            </h2>
+            <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
+              While this is example content for now, it represents the type of story you may
+              feature later – highlighting how LENA Leaf helped a patient access care that fits
+              around their life.
+            </p>
+            <figure className="space-y-3">
+              <blockquote className="text-sm italic leading-relaxed text-slate-700">
+                “Booking my LENA Leaf consult was straightforward, and I felt listened to during
+                the video appointment. It was reassuring to get holistic advice without needing to
+                travel.”
+              </blockquote>
+              <figcaption className="text-xs font-medium text-slate-600">
+                — Future LENA Leaf patient
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="flex items-center justify-center">
+            <div
+              className="relative h-48 w-full max-w-sm overflow-hidden rounded-3xl bg-gradient-to-br from-[rgba(25,180,188,0.1)] via-white to-[rgba(233,118,43,0.15)] p-[1px] shadow-md"
+            >
+              <div className="flex h-full w-full items-center justify-center rounded-[22px] bg-white/95 px-6 py-6 text-center text-xs leading-relaxed text-slate-700 sm:text-sm">
+                This area can later be replaced with a photo or illustration that matches the
+                patient stories shown here, aligned with the main Lena Medical site.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
