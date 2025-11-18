@@ -28,7 +28,7 @@ export default function Contact() {
               className="text-3xl font-semibold tracking-tight sm:text-4xl"
               style={{ color: "#19b4bc" }}
             >
-              Were here to help
+              We are here to help
             </h1>
 
             <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
@@ -89,7 +89,7 @@ export default function Contact() {
             <div className="relative w-full rounded-3xl bg-white shadow-xl ring-1 ring-black/5 p-6 sm:p-7">
               <h2 className="text-lg font-semibold text-[rgb(12,122,136)]">Send us a message</h2>
               <p className="mt-1.5 text-xs sm:text-[13px] text-slate-600">
-                Share a few details and well get back to you as soon as we can.
+                Share a few details and we will get back to you as soon as we can.
               </p>
 
               <form className="mt-5 space-y-4">
