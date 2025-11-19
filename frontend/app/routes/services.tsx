@@ -93,6 +93,142 @@ const journeySteps = [
   },
 ] as const;
 
+function JourneyIcon({ index }: { index: number }) {
+  const i = index % 6;
+
+  if (i === 0) {
+    // clipboard / history
+    return (
+      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" aria-hidden>
+        <rect x="8" y="4" width="8" height="3" rx="1.5" fill="currentColor" opacity="0.9" />
+        <rect
+          x="6"
+          y="6.5"
+          width="12"
+          height="13.5"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <path d="M9 11h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M9 14h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (i === 1) {
+    // video camera
+    return (
+      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+        <rect
+          x="4.25"
+          y="7.25"
+          width="10.5"
+          height="9.5"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M14.75 10.5 18.5 8.5a.9.9 0 0 1 1.35.78v6.44a.9.9 0 0 1-1.35.78l-3.75-2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="8" cy="9.75" r="0.7" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (i === 2) {
+    // heart
+    return (
+      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+        <path
+          d="M12 18s-3.8-2.4-5.9-4.6C4 11.2 4 8.7 5.6 7.1 6.8 5.9 8.8 5.9 10 7.1L12 9l2-1.9c1.2-1.2 3.2-1.2 4.4 0 1.6 1.6 1.6 4.1-.5 6.3C15.8 15.6 12 18 12 18Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  if (i === 3) {
+    // leaf / herbal
+    return (
+      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+        <path
+          d="M18.5 5.5S13 5 9.5 8.5 5 18.5 5 18.5 11 19 14.5 15.5 18.5 5.5 18.5 5.5Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 15.5 13 11.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (i === 4) {
+    // calendar
+    return (
+      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+        <rect
+          x="4.25"
+          y="6.25"
+          width="15.5"
+          height="13.5"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <path d="M4 10h16" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M9 4v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M15 4v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="9" y="12" width="2.5" height="2.5" rx="0.6" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  // progress / chart
+  return (
+    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" aria-hidden>
+      <path
+        d="M5 18h14"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M7 15.5 10 11l3 2 4-5.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="7" cy="15.5" r="0.7" fill="currentColor" />
+      <circle cx="10" cy="11" r="0.7" fill="currentColor" />
+      <circle cx="13" cy="13" r="0.7" fill="currentColor" />
+      <circle cx="17" cy="7.5" r="0.7" fill="currentColor" />
+    </svg>
+  );
+}
+
 const services = [
   {
     name: "Herbal Medicine",
@@ -559,87 +695,166 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="journey-section mx-auto mt-10 max-w-7xl px-6 pb-14">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-            Your Journey to
-            <span className="ml-1" style={{ color: "#e9762b" }}>
-              Natural Wellness
-            </span>
-          </p>
-          <h2
-            className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl"
-            style={{ color: "#19b4bc" }}
-          >
-            A guided, step-by-step care pathway
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
-            Our structured approach ensures you receive personalised, safe and effective natural
-            medicine care from your first assessment through to long-term support.
-          </p>
-        </div>
+      <section
+        className="journey-section relative mt-12 w-full overflow-hidden pb-16 pt-14"
+        style={{ background: "linear-gradient(135deg, #f4fbfc, #fff7f1)" }}
+      >
+        {/* soft background glows */}
+        <div className="pointer-events-none absolute -left-24 top-8 h-64 w-64 rounded-full bg-[rgba(25,180,188,0.12)] blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-[rgba(233,118,43,0.12)] blur-3xl" />
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
-          <div className="space-y-8">
-            {journeySteps.filter((_, index) => index % 2 === 0).map((step, index) => (
-              <article
-                key={step.title}
-                className="relative rounded-3xl bg-white/95 p-5 text-left shadow-sm ring-1 ring-slate-100"
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <h3
-                    className="text-sm font-semibold sm:text-[15px]"
-                    style={{ color: "#19b4bc" }}
-                  >
-                    {step.title}
-                  </h3>
-                  <span className="rounded-full bg-orange-50 px-3 py-1 text-[11px] font-medium text-[color:#e9762b]">
-                    {journeySteps[index * 2]?.duration}
-                  </span>
-                </div>
-                <p className="mt-2 text-xs leading-relaxed text-slate-700 sm:text-sm">
-                  {step.description}
-                </p>
-              </article>
-            ))}
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+              Your Journey to
+              <span className="ml-1" style={{ color: "#e9762b" }}>
+                Natural Wellness
+              </span>
+            </p>
+            <h2
+              className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl"
+              style={{ color: "#19b4bc" }}
+            >
+              A guided, step-by-step care pathway
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
+              Our structured approach ensures you receive personalised, safe and effective natural
+              medicine care from your first assessment through to long-term support.
+            </p>
           </div>
 
-          <div className="relative flex flex-col items-center">
-            <div className="absolute inset-y-3 w-[2px] bg-gradient-to-b from-[rgba(25,180,188,0.3)] via-[rgba(25,180,188,0.15)] to-[rgba(233,118,43,0.3)]" />
-            <div className="flex flex-col items-center gap-10">
-              {journeySteps.map((_, index) => (
-                <div
-                  key={index}
-                  className="relative flex h-9 w-9 items-center justify-center rounded-full border border-white bg-[color:#e9762b] text-[13px] font-semibold text-white shadow-sm ring-1 ring-[rgba(0,0,0,0.06)]"
-                >
-                  {index + 1}
-                </div>
-              ))}
+          <div className="relative mx-auto mt-10 max-w-5xl">
+            <div className="pointer-events-none absolute inset-x-8 top-6 hidden h-[calc(100%-3rem)] items-stretch justify-center lg:flex">
+              <div className="h-full w-[3px] rounded-full bg-gradient-to-b from-[rgba(25,180,188,0.5)] via-[rgba(25,180,188,0.18)] to-[rgba(233,118,43,0.6)]" />
             </div>
-          </div>
 
-          <div className="mt-16 space-y-8 lg:mt-0">
-            {journeySteps.filter((_, index) => index % 2 === 1).map((step, idx) => (
-              <article
-                key={step.title}
-                className="relative rounded-3xl bg-white/95 p-5 text-left shadow-sm ring-1 ring-slate-100"
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <h3
-                    className="text-sm font-semibold sm:text-[15px]"
-                    style={{ color: "#19b4bc" }}
+            <div className="space-y-4 lg:space-y-6">
+              {journeySteps.map((step, index) => {
+                const isLeft = index % 2 === 0;
+
+                return (
+                  <div
+                    key={step.title}
+                    className="relative grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-16"
                   >
-                    {step.title}
-                  </h3>
-                  <span className="rounded-full bg-orange-50 px-3 py-1 text-[11px] font-medium text-[color:#e9762b]">
-                    {journeySteps[idx * 2 + 1]?.duration}
-                  </span>
-                </div>
-                <p className="mt-2 text-xs leading-relaxed text-slate-700 sm:text-sm">
-                  {step.description}
-                </p>
-              </article>
-            ))}
+                    {/* Number badge in the center on large screens */}
+                    <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
+                      <div className="relative flex h-10 w-10 items-center justify-center rounded-full border border-white bg-[color:#e9762b] text-[13px] font-semibold text-white shadow-md ring-1 ring-[rgba(0,0,0,0.06)]">
+                        <span className="absolute -z-10 h-14 w-14 rounded-full bg-[rgba(233,118,43,0.18)] blur-[1px]" />
+                        {index + 1}
+                      </div>
+                    </div>
+
+                    {/* Left column card */}
+                    <div
+                      className={
+                        isLeft
+                          ? "order-1 lg:order-none lg:pr-10"
+                          : "order-2 lg:order-1 lg:col-start-1 lg:pr-10"
+                      }
+                    >
+                      {isLeft && (
+                        <article className="group relative max-w-3xl rounded-3xl bg-white/95 px-6 py-5 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl">
+                          {/* connector from line to card */}
+                          <div className="pointer-events-none absolute -right-8 top-1/2 hidden h-px w-8 -translate-y-1/2 bg-gradient-to-r from-[rgba(25,180,188,0.35)] to-transparent lg:block" />
+                          <div className="flex items-start gap-4">
+                            <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(233,118,43,0.08)]">
+                              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:#e9762b] text-white">
+                                <JourneyIcon index={index} />
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center justify-between gap-3">
+                                <h3
+                                  className="text-sm font-semibold sm:text-[15px]"
+                                  style={{ color: "#19b4bc" }}
+                                >
+                                  {step.title}
+                                </h3>
+                                <span className="rounded-full bg-orange-50 px-3 py-1 text-[11px] font-medium text-[color:#e9762b] shadow-sm">
+                                  {step.duration}
+                                </span>
+                              </div>
+                              <p className="mt-2 text-xs leading-relaxed text-slate-700 sm:text-sm">
+                                {step.description}
+                              </p>
+                            </div>
+                          </div>
+                        </article>
+                      )}
+                    </div>
+
+                    {/* Right column card */}
+                    <div
+                      className={
+                        isLeft
+                          ? "order-2 lg:order-2 lg:pl-10"
+                          : "order-1 mb-0 lg:order-2 lg:col-start-2 lg:pl-10"
+                      }
+                    >
+                      {!isLeft && (
+                        <article className="group relative max-w-3xl rounded-3xl bg-white/95 px-6 py-5 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl lg:ml-auto">
+                          {/* connector from line to card */}
+                          <div className="pointer-events-none absolute -left-8 top-1/2 hidden h-px w-8 -translate-y-1/2 bg-gradient-to-l from-[rgba(25,180,188,0.35)] to-transparent lg:block" />
+                          <div className="flex items-start gap-4">
+                            <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(233,118,43,0.08)]">
+                              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:#e9762b] text-white">
+                                <JourneyIcon index={index} />
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center justify-between gap-3">
+                                <h3
+                                  className="text-sm font-semibold sm:text-[15px]"
+                                  style={{ color: "#19b4bc" }}
+                                >
+                                  {step.title}
+                                </h3>
+                                <span className="rounded-full bg-orange-50 px-3 py-1 text-[11px] font-medium text-[color:#e9762b] shadow-sm">
+                                  {step.duration}
+                                </span>
+                              </div>
+                              <p className="mt-2 text-xs leading-relaxed text-slate-700 sm:text-sm">
+                                {step.description}
+                              </p>
+                            </div>
+                          </div>
+                        </article>
+                      )}
+                    </div>
+
+                    {/* Mobile / small screen card (full width) */}
+                    <div className="lg:hidden">
+                      <article className="group relative mt-2 rounded-3xl bg-white/95 px-5 py-4 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-lg">
+                        <div className="flex items-start gap-3">
+                          <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-[rgba(233,118,43,0.08)]">
+                            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[color:#e9762b] text-white">
+                              <JourneyIcon index={index} />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between gap-3">
+                              <h3
+                                className="text-[13px] font-semibold sm:text-sm"
+                                style={{ color: "#19b4bc" }}
+                              >
+                                {step.title}
+                              </h3>
+                              <span className="rounded-full bg-orange-50 px-2.5 py-1 text-[10px] font-medium text-[color:#e9762b] shadow-sm">
+                                {step.duration}
+                              </span>
+                            </div>
+                            <p className="mt-1.5 text-[11px] leading-relaxed text-slate-700">
+                              {step.description}
+                            </p>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
