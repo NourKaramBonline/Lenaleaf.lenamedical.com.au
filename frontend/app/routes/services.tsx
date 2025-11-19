@@ -596,256 +596,108 @@ export default function Services() {
         </div>
       </section>
 
-      <section
-        className="cta-banner w-full py-14"
-        style={{ background: "linear-gradient(135deg, #eff9fb, #e1f3f7)" }}
-      >
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <h2
-            className="text-2xl font-semibold tracking-tight sm:text-3xl"
-            style={{ color: "#19b4bc" }}
-          >
-            Ready to experience better healthcare?
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
-            Join patients who trust Lena Medical for their telehealth care. Book your consultation
-            today and experience the convenience of natural, online support.
-          </p>
-
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="https://lenamedical.com.au/appointments/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
-              style={{ backgroundColor: "#19b4bc" }}
-            >
-              Book appointment
-            </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border px-7 py-3 text-sm font-semibold text-[rgb(12,122,136)] shadow-sm transition-colors duration-150 hover:bg-white"
-              style={{ borderColor: "#19b4bc" }}
-            >
-              Contact us
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="trusted-partner mx-auto max-w-7xl px-6 py-16">
-        <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-            Trusted Healthcare Partner
-          </p>
-          <h2
-            className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl"
-            style={{ color: "#19b4bc" }}
-          >
-            Built on clinical standards and secure telehealth
-          </h2>
-        </div>
-
-        <div className="mt-10 grid gap-8 md:grid-cols-3">
-          {[ 
-            {
-              title: "AHPRA registered",
-              description:
-                "All clinicians are registered with AHPRA and qualified to provide telehealth services in Australia.",
-            },
-            {
-              title: "Secure platform",
-              description:
-                "Your health information is protected with bank-level security and HIPAA-compliant telehealth technology.",
-            },
-            {
-              title: "Growing network",
-              description:
-                "An expanding network of healthcare professionals and services to support diverse health needs.",
-            },
-          ].map((item, idx) => (
-            <article
-              key={item.title}
-              className="group relative flex flex-col items-center rounded-3xl bg-white/95 p-6 text-center shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
-            >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-teal-50 text-[16px] font-semibold text-[rgb(12,122,136)]">
-                {idx === 0 && "✔"}
-                {idx === 1 && "🔒"}
-                {idx === 2 && "↗"}
-              </div>
-              <h3
-                className="mb-2 text-sm font-semibold sm:text-[15px]"
-                style={{ color: "#19b4bc" }}
-              >
-                {item.title}
-              </h3>
-              <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-                {item.description}
-              </p>
-
-              <div
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
-                style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }}
-              />
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        className="practitioners-section w-full pb-20 pt-4"
-        style={{ backgroundColor: "#f3fafb" }}
-      >
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-2xl text-center">
+      <section className="services-grid mx-auto mt-10 max-w-7xl px-6 pb-16">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-3 max-w-xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Meet Our
+              LENA Leaf
               <span className="ml-1" style={{ color: "#e9762b" }}>
-                Alternative Medicine Practitioners
+                Services
               </span>
             </p>
             <h2
-              className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl"
+              className="text-2xl font-semibold tracking-tight sm:text-3xl"
               style={{ color: "#19b4bc" }}
             >
-              Experienced, evidence-informed natural health care
+              Explore our natural service areas
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
-              Our qualified practitioners combine traditional wisdom with modern, evidence-based
-              approaches to support your health safely and effectively.
+            <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
+              These service categories help organise the types of support available through LENA
+              Leaf. Your clinician will always recommend options that are safe and appropriate for
+              you.
             </p>
           </div>
+          <p className="mt-2 max-w-sm text-[11px] leading-relaxed text-slate-500">
+            Information here is general in nature and does not replace medical advice. Always speak
+            with your healthcare provider about what is right for you.
+          </p>
+        </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)]">
-            <article className="relative flex flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-slate-100">
-              <div>
-                <div className="mb-4 flex items-center gap-2">
-                  <h3
-                    className="text-sm font-semibold sm:text-[15px]"
-                    style={{ color: "#19b4bc" }}
-                  >
-                    Medical Team
-                  </h3>
-                </div>
-                <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-                  Experienced alternative medicine practitioners providing personalised care via
-                  telehealth.
-                </p>
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {services.map((service) => {
+            const borderColor =
+              service.accent === "teal"
+                ? "#19b4bc"
+                : service.accent === "orange"
+                ? "#e9762b"
+                : service.accent === "rose"
+                ? "#f97373"
+                : "#f59e0b";
 
-                <div className="mt-5 grid gap-4 text-[11px] text-slate-600 sm:grid-cols-3">
-                  <div>
-                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">15+ years</p>
-                    <p className="text-[11px] text-slate-500">Combined experience</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">4.9</p>
-                    <p className="text-[11px] text-slate-500">Average rating*</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">2</p>
-                    <p className="text-[11px] text-slate-500">Languages</p>
-                  </div>
-                </div>
-
-                <div className="mt-5 space-y-3 text-[11px]">
-                  <div>
-                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
-                      Specialties
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        "Alternative medicine",
-                        "Chronic disease management",
-                        "Anxiety & stress",
-                        "Sleep support",
-                      ].map((label) => (
-                        <span
-                          key={label}
-                          className="rounded-full bg-teal-50 px-3 py-1 text-[11px] font-medium text-[rgb(12,122,136)] ring-1 ring-[rgba(25,180,188,0.15)]"
-                        >
-                          {label}
-                        </span>
-                      ))}
+            return (
+              <article
+                key={service.name}
+                className="group relative flex flex-col overflow-hidden rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="space-y-3">
+                    <div
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-50 text-[13px] font-semibold text-[rgb(12,122,136)]"
+                      style={{ borderTopColor: borderColor, borderWidth: 1 }}
+                    >
+                      <span className="mt-[1px]">{service.name.charAt(0)}</span>
                     </div>
-                  </div>
-
-                  <div>
-                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
-                      Languages
+                    <h3
+                      className="text-sm font-semibold sm:text-[15px]"
+                      style={{ color: "#19b4bc" }}
+                    >
+                      {service.name}
+                    </h3>
+                    <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
+                      {service.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      {["English", "Arabic"].map((label) => (
-                        <span
-                          key={label}
-                          className="rounded-full bg-slate-50 px-3 py-1 text-[11px] font-medium text-[rgb(12,122,136)] ring-1 ring-slate-200"
-                        >
-                          {label}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="mt-6 flex items-center justify-between text-[11px] text-slate-500">
-                <span>*Indicative rating based on patient feedback.</span>
-                <a
-                  href="https://lenamedical.com.au/appointments/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full px-5 py-2 text-[11px] font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
-                  style={{ backgroundColor: "#e9762b" }}
-                >
-                  Book a consultation
-                </a>
-              </div>
-            </article>
+                <ul className="mt-4 space-y-1.5 text-xs text-slate-700 sm:text-[13px]">
+                  {service.points.map((point) => (
+                    <li key={point} className="flex items-start gap-2">
+                      <span
+                        className="mt-[3px] h-1.5 w-1.5 rounded-full"
+                        style={{ backgroundColor: borderColor }}
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
 
-            <div className="grid gap-6 sm:grid-cols-2">
-              {[ 
-                {
-                  title: "Medical Education",
-                  description:
-                    "Our practitioners are graduates of respected medical or health schools with training in both conventional and natural medicine.",
-                },
-                {
-                  title: "Specialisations",
-                  description:
-                    "Team of clinicians with expertise in chronic disease management, holistic wellness and evidence-informed natural therapies.",
-                },
-                {
-                  title: "Comprehensive Care",
-                  description:
-                    "Experience across primary care, emergency medicine and integrative approaches for complex conditions.",
-                },
-                {
-                  title: "Multicultural Practice",
-                  description:
-                    "Multilingual team able to provide culturally sensitive care to our diverse patient community.",
-                },
-              ].map((item) => (
-                <article
-                  key={item.title}
-                  className="relative flex flex-col rounded-3xl bg-white/95 p-5 text-left shadow-sm ring-1 ring-slate-100"
-                >
-                  <h3
-                    className="mb-2 text-sm font-semibold sm:text-[15px]"
-                    style={{ color: "#19b4bc" }}
+                <div className="mt-5 flex items-center justify-between gap-3 text-[11px] text-slate-500">
+                  <span>Available via secure telehealth consults.</span>
+                  <a
+                    href="https://lenamedical.com.au/appointments/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center rounded-full px-4 py-2 text-[11px] font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
+                    style={{ backgroundColor: "#19b4bc" }}
                   >
-                    {item.title}
-                  </h3>
-                  <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-                    {item.description}
-                  </p>
+                    Book now
+                  </a>
+                </div>
 
-                  <div
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
-                    style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }}
-                  />
-                </article>
-              ))}
-            </div>
-          </div>
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
+                  style={{
+                    backgroundImage:
+                      service.accent === "teal"
+                        ? "linear-gradient(90deg, #19b4bc, #e9762b)"
+                        : service.accent === "orange"
+                        ? "linear-gradient(90deg, #e9762b, #19b4bc)"
+                        : "linear-gradient(90deg, #19b4bc, #f97373)",
+                  }}
+                />
+              </article>
+            );
+          })}
         </div>
       </section>
 
@@ -1103,108 +955,256 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="services-grid mx-auto mt-10 max-w-7xl px-6 pb-16">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div className="space-y-3 max-w-xl">
+      <section
+        className="practitioners-section w-full pb-20 pt-4"
+        style={{ backgroundColor: "#f3fafb" }}
+      >
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              LENA Leaf
+              Meet Our
               <span className="ml-1" style={{ color: "#e9762b" }}>
-                Services
+                Alternative Medicine Practitioners
               </span>
             </p>
             <h2
-              className="text-2xl font-semibold tracking-tight sm:text-3xl"
+              className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl"
               style={{ color: "#19b4bc" }}
             >
-              Explore our natural service areas
+              Experienced, evidence-informed natural health care
             </h2>
-            <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
-              These service categories help organise the types of support available through LENA
-              Leaf. Your clinician will always recommend options that are safe and appropriate for
-              you.
+            <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
+              Our qualified practitioners combine traditional wisdom with modern, evidence-based
+              approaches to support your health safely and effectively.
             </p>
           </div>
-          <p className="mt-2 max-w-sm text-[11px] leading-relaxed text-slate-500">
-            Information here is general in nature and does not replace medical advice. Always speak
-            with your healthcare provider about what is right for you.
-          </p>
-        </div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service) => {
-            const borderColor =
-              service.accent === "teal"
-                ? "#19b4bc"
-                : service.accent === "orange"
-                ? "#e9762b"
-                : service.accent === "rose"
-                ? "#f97373"
-                : "#f59e0b";
+          <div className="mt-10 grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)]">
+            <article className="relative flex flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-slate-100">
+              <div>
+                <div className="mb-4 flex items-center gap-2">
+                  <h3
+                    className="text-sm font-semibold sm:text-[15px]"
+                    style={{ color: "#19b4bc" }}
+                  >
+                    Medical Team
+                  </h3>
+                </div>
+                <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
+                  Experienced alternative medicine practitioners providing personalised care via
+                  telehealth.
+                </p>
 
-            return (
-              <article
-                key={service.name}
-                className="group relative flex flex-col overflow-hidden rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="space-y-3">
-                    <div
-                      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-50 text-[13px] font-semibold text-[rgb(12,122,136)]"
-                      style={{ borderTopColor: borderColor, borderWidth: 1 }}
-                    >
-                      <span className="mt-[1px]">{service.name.charAt(0)}</span>
-                    </div>
-                    <h3
-                      className="text-sm font-semibold sm:text-[15px]"
-                      style={{ color: "#19b4bc" }}
-                    >
-                      {service.name}
-                    </h3>
-                    <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-                      {service.description}
-                    </p>
+                <div className="mt-5 grid gap-4 text-[11px] text-slate-600 sm:grid-cols-3">
+                  <div>
+                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">15+ years</p>
+                    <p className="text-[11px] text-slate-500">Combined experience</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">4.9</p>
+                    <p className="text-[11px] text-slate-500">Average rating*</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">2</p>
+                    <p className="text-[11px] text-slate-500">Languages</p>
                   </div>
                 </div>
 
-                <ul className="mt-4 space-y-1.5 text-xs text-slate-700 sm:text-[13px]">
-                  {service.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2">
-                      <span
-                        className="mt-[3px] h-1.5 w-1.5 rounded-full"
-                        style={{ backgroundColor: borderColor }}
-                      />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="mt-5 space-y-3 text-[11px]">
+                  <div>
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                      Specialties
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        "Alternative medicine",
+                        "Chronic disease management",
+                        "Anxiety & stress",
+                        "Sleep support",
+                      ].map((label) => (
+                        <span
+                          key={label}
+                          className="rounded-full bg-teal-50 px-3 py-1 text-[11px] font-medium text-[rgb(12,122,136)] ring-1 ring-[rgba(25,180,188,0.15)]"
+                        >
+                          {label}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-                <div className="mt-5 flex items-center justify-between gap-3 text-[11px] text-slate-500">
-                  <span>Available via secure telehealth consults.</span>
-                  <a
-                    href="https://lenamedical.com.au/appointments/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-full px-4 py-2 text-[11px] font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
-                    style={{ backgroundColor: "#19b4bc" }}
-                  >
-                    Book now
-                  </a>
+                  <div>
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                      Languages
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {["English", "Arabic"].map((label) => (
+                        <span
+                          key={label}
+                          className="rounded-full bg-slate-50 px-3 py-1 text-[11px] font-medium text-[rgb(12,122,136)] ring-1 ring-slate-200"
+                        >
+                          {label}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
-                  style={{
-                    backgroundImage:
-                      service.accent === "teal"
-                        ? "linear-gradient(90deg, #19b4bc, #e9762b)"
-                        : service.accent === "orange"
-                        ? "linear-gradient(90deg, #e9762b, #19b4bc)"
-                        : "linear-gradient(90deg, #19b4bc, #f97373)",
-                  }}
-                />
-              </article>
-            );
-          })}
+              <div className="mt-6 flex items-center justify-between text-[11px] text-slate-500">
+                <span>*Indicative rating based on patient feedback.</span>
+                <a
+                  href="https://lenamedical.com.au/appointments/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-full px-5 py-2 text-[11px] font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
+                  style={{ backgroundColor: "#e9762b" }}
+                >
+                  Book a consultation
+                </a>
+              </div>
+            </article>
+
+            <div className="grid gap-6 sm:grid-cols-2">
+              {[
+                {
+                  title: "Medical Education",
+                  description:
+                    "Our practitioners are graduates of respected medical or health schools with training in both conventional and natural medicine.",
+                },
+                {
+                  title: "Specialisations",
+                  description:
+                    "Team of clinicians with expertise in chronic disease management, holistic wellness and evidence-informed natural therapies.",
+                },
+                {
+                  title: "Comprehensive Care",
+                  description:
+                    "Experience across primary care, emergency medicine and integrative approaches for complex conditions.",
+                },
+                {
+                  title: "Multicultural Practice",
+                  description:
+                    "Multilingual team able to provide culturally sensitive care to our diverse patient community.",
+                },
+              ].map((item) => (
+                <article
+                  key={item.title}
+                  className="relative flex flex-col rounded-3xl bg-white/95 p-5 text-left shadow-sm ring-1 ring-slate-100"
+                >
+                  <h3
+                    className="mb-2 text-sm font-semibold sm:text-[15px]"
+                    style={{ color: "#19b4bc" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
+                    {item.description}
+                  </p>
+
+                  <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
+                    style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }}
+                  />
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="trusted-partner mx-auto max-w-7xl px-6 py-16">
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+            Trusted Healthcare Partner
+          </p>
+          <h2
+            className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl"
+            style={{ color: "#19b4bc" }}
+          >
+            Built on clinical standards and secure telehealth
+          </h2>
+        </div>
+
+        <div className="mt-10 grid gap-8 md:grid-cols-3">
+          {[
+            {
+              title: "AHPRA registered",
+              description:
+                "All clinicians are registered with AHPRA and qualified to provide telehealth services in Australia.",
+            },
+            {
+              title: "Secure platform",
+              description:
+                "Your health information is protected with bank-level security and HIPAA-compliant telehealth technology.",
+            },
+            {
+              title: "Growing network",
+              description:
+                "An expanding network of healthcare professionals and services to support diverse health needs.",
+            },
+          ].map((item, idx) => (
+            <article
+              key={item.title}
+              className="group relative flex flex-col items-center rounded-3xl bg-white/95 p-6 text-center shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+            >
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-teal-50 text-[16px] font-semibold text-[rgb(12,122,136)]">
+                {idx === 0 && "✔"}
+                {idx === 1 && "🔒"}
+                {idx === 2 && "↗"}
+              </div>
+              <h3
+                className="mb-2 text-sm font-semibold sm:text-[15px]"
+                style={{ color: "#19b4bc" }}
+              >
+                {item.title}
+              </h3>
+              <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
+                {item.description}
+              </p>
+
+              <div
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
+                style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }}
+              />
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section
+        className="cta-banner w-full py-14"
+        style={{ background: "linear-gradient(135deg, #eff9fb, #e1f3f7)" }}
+      >
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <h2
+            className="text-2xl font-semibold tracking-tight sm:text-3xl"
+            style={{ color: "#19b4bc" }}
+          >
+            Ready to experience better healthcare?
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
+            Join patients who trust Lena Medical for their telehealth care. Book your consultation
+            today and experience the convenience of natural, online support.
+          </p>
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://lenamedical.com.au/appointments/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
+              style={{ backgroundColor: "#19b4bc" }}
+            >
+              Book appointment
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full border px-7 py-3 text-sm font-semibold text-[rgb(12,122,136)] shadow-sm transition-colors duration-150 hover:bg-white"
+              style={{ borderColor: "#19b4bc" }}
+            >
+              Contact us
+            </a>
+          </div>
         </div>
       </section>
     </main>
