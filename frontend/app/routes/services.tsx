@@ -99,7 +99,7 @@ function JourneyIcon({ index }: { index: number }) {
   if (i === 0) {
     // clipboard / history
     return (
-      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" aria-hidden>
+      <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden>
         <rect x="8" y="4" width="8" height="3" rx="1.5" fill="currentColor" opacity="0.9" />
         <rect
           x="6"
@@ -120,7 +120,7 @@ function JourneyIcon({ index }: { index: number }) {
   if (i === 1) {
     // video camera
     return (
-      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" aria-hidden>
         <rect
           x="4.25"
           y="7.25"
@@ -147,7 +147,7 @@ function JourneyIcon({ index }: { index: number }) {
   if (i === 2) {
     // heart
     return (
-      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden>
+      <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden>
         <path
           d="M12 18s-3.8-2.4-5.9-4.6C4 11.2 4 8.7 5.6 7.1 6.8 5.9 8.8 5.9 10 7.1L12 9l2-1.9c1.2-1.2 3.2-1.2 4.4 0 1.6 1.6 1.6 4.1-.5 6.3C15.8 15.6 12 18 12 18Z"
           fill="none"
@@ -225,6 +225,226 @@ function JourneyIcon({ index }: { index: number }) {
       <circle cx="10" cy="11" r="0.7" fill="currentColor" />
       <circle cx="13" cy="13" r="0.7" fill="currentColor" />
       <circle cx="17" cy="7.5" r="0.7" fill="currentColor" />
+    </svg>
+  );
+}
+
+function BenefitIcon({ index }: { index: number }) {
+  // Use Material Symbols only for specific benefits by absolute index
+  if (index === 1) {
+    // Personalised Care: stethoscope (Material Symbols Outlined)
+    return (
+      <span className="material-symbols-outlined text-[28px] leading-none" aria-hidden>
+        stethoscope
+      </span>
+    );
+  }
+
+  if (index === 2) {
+    // Minimal Side Effects: pill (Material Symbols Outlined)
+    return (
+      <span className="material-symbols-outlined text-[28px] leading-none" aria-hidden>
+        pill
+      </span>
+    );
+  }
+
+  if (index === 3) {
+    // Holistic Approach: skeleton (Material Symbols Outlined)
+    return (
+      <span className="material-symbols-outlined text-[28px] leading-none" aria-hidden>
+        skeleton
+      </span>
+    );
+  }
+
+  if (index === 5) {
+    // Evidence-Based: heart_check (Material Symbols Outlined)
+    return (
+      <span className="material-symbols-outlined text-[28px] leading-none" aria-hidden>
+        heart_check
+      </span>
+    );
+  }
+
+  if (index === 6) {
+    // Mental Clarity: neurology (Material Symbols Outlined)
+    return (
+      <span className="material-symbols-outlined text-[28px] leading-none" aria-hidden>
+        neurology
+      </span>
+    );
+  }
+
+  if (index === 7) {
+    // Enhanced Vitality: cardiology (Material Symbols Outlined)
+    return (
+      <span className="material-symbols-outlined text-[28px] leading-none" aria-hidden>
+        cardiology
+      </span>
+    );
+  }
+
+  const i = index % 6;
+
+  if (i === 0) {
+    // target / focus icon
+    return (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
+        <circle
+          cx="12"
+          cy="12"
+          r="7.5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="4.5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
+        <circle cx="12" cy="12" r="1.8" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (i === 1) {
+    // stethoscope (original SVG)
+    return (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
+        <path
+          d="M7 4v4.5a3 3 0 0 0 6 0V4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M6 4h2"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M11 4h2"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <circle cx="17" cy="11" r="1.6" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <path
+          d="M17 12.6V15a4 4 0 0 1-4 4h-1.5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (i === 2) {
+    // capsule / pill (original SVG)
+    return (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
+        <rect
+          x="6"
+          y="7"
+          width="12"
+          height="10"
+          rx="5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M9 9.5 15 15"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (i === 3) {
+    // brain / cognition
+    return (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
+        <path
+          d="M9.5 6.5a2 2 0 0 0-3.9.6A3.2 3.2 0 0 0 5 8.7 3 3 0 0 0 4 11a3 3 0 0 0 1.3 2.5A2.7 2.7 0 0 0 6 16.3 2.5 2.5 0 0 0 8.5 18"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M14.5 6.5a2 2 0 0 1 3.9.6 3.2 3.2 0 0 1 .6 1.6A3 3 0 0 1 20 11a3 3 0 0 1-1.3 2.5 2.7 2.7 0 0 1-.7 2.8A2.5 2.5 0 0 1 15.5 18"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12 5v14"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (i === 4) {
+    // shield / protection
+    return (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
+        <path
+          d="M12 4.5 7.5 6 6 6.5v5.3c0 3.1 2.2 5.9 6 7.7 3.8-1.8 6-4.6 6-7.7V6.5L16.5 6 12 4.5Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9.5 11.5 11 13l3.5-3.5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  // herbal / leaf
+  return (
+    <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden>
+      <path
+        d="M18.5 5.5S13 5 9.5 8.5 5 18.5 5 18.5 11 19 14.5 15.5 18.5 5.5 18.5 5.5Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9 15.5 13 11.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -631,7 +851,10 @@ export default function Services() {
 
       <section
         className="benefits-section w-full py-14"
-        style={{ backgroundColor: "#edf8f9" }}
+        style={{
+          background:
+            "radial-gradient(circle at top left, rgba(25,180,188,0.16), transparent 55%), radial-gradient(circle at bottom right, rgba(233,118,43,0.16), transparent 55%), linear-gradient(135deg, #f4fbfc, #fdf7f2)",
+        }}
       >
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-2xl text-center">
@@ -657,38 +880,27 @@ export default function Services() {
             {benefits.map((benefit, index) => (
               <article
                 key={benefit.title}
-                className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/95 p-6 text-left shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/40 bg-white/10 p-[1px] text-left shadow-[0_18px_45px_rgba(15,23,42,0.06)] backdrop-blur-lg transition-all duration-200 hover:-translate-y-2 hover:border-white/70 hover:bg-white/15 hover:shadow-[0_22px_60px_rgba(15,23,42,0.12)]"
               >
-                <div className="relative mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-teal-50 text-[15px] font-semibold text-[rgb(12,122,136)]">
-                  <span className="mt-[1px]">{index + 1}</span>
-                  <div className="pointer-events-none absolute -right-3 -top-3 h-7 w-7 rounded-full bg-[rgba(25,180,188,0.12)]" />
-                </div>
-                <h3
-                  className="mb-2 text-sm font-semibold sm:text-[15px]"
-                  style={{ color: "#19b4bc" }}
-                >
-                  {benefit.title}
-                </h3>
-                <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-                  {benefit.description}
-                </p>
+                <div className="flex h-full flex-col rounded-[22px] bg-gradient-to-br from-white/40 via-white/10 to-white/5 p-6">
+                  <div className="mb-4 flex items-start justify-between gap-3">
+                    <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-white/70 via-white/30 to-[rgba(25,180,188,0.18)] text-[14px] font-semibold text-[rgb(12,122,136)] shadow-[0_10px_24px_rgba(15,23,42,0.12)] ring-1 ring-white/60">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-[14px] bg-white/40 shadow-[0_6px_16px_rgba(15,23,42,0.12)]">
+                        <BenefitIcon index={index} />
+                      </span>
+                    </div>
+                  </div>
 
-                <div className="mt-4 flex items-center justify-between text-[11px] text-slate-500">
-                  <span>Supports safer, long-term health outcomes.</span>
-                  <span
-                    className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[rgba(233,118,43,0.08)] text-[10px] font-semibold text-[color:#e9762b]"
-                    aria-hidden
+                  <h3
+                    className="mb-2 text-sm font-semibold sm:text-[15px]"
+                    style={{ color: "#19b4bc" }}
                   >
-                    a
-                  </span>
+                    {benefit.title}
+                  </h3>
+                  <p className="text-xs leading-relaxed text-slate-800/90 sm:text-sm">
+                    {benefit.description}
+                  </p>
                 </div>
-
-                <div
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
-                  style={{
-                    backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)",
-                  }}
-                />
               </article>
             ))}
           </div>
