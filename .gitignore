@@ -1,0 +1,2 @@
+# Ignore large or binary assets not meant for source control
+frontend/public/vid/

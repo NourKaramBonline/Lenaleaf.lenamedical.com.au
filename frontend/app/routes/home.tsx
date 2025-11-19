@@ -95,7 +95,7 @@ export default function Home() {
                     loop
                     playsInline
                     controls={false}
-                    src="/lena-medical/home-hero.mp4"
+                    src="/vid/home-hero.mp4"
                   />
                 </div>
               </div>
