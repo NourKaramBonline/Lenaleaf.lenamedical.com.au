@@ -754,7 +754,7 @@ export default function Services() {
                       }
                     >
                       {isLeft && (
-                        <article className="group relative max-w-3xl rounded-3xl bg-white/95 px-6 py-5 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl">
+                        <article className="group relative hidden max-w-3xl rounded-3xl bg-white/95 px-6 py-5 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl lg:block">
                           {/* connector from line to card */}
                           <div className="pointer-events-none absolute -right-8 top-1/2 hidden h-px w-8 -translate-y-1/2 bg-gradient-to-r from-[rgba(25,180,188,0.35)] to-transparent lg:block" />
                           <div className="flex items-start gap-4">
@@ -793,7 +793,7 @@ export default function Services() {
                       }
                     >
                       {!isLeft && (
-                        <article className="group relative max-w-3xl rounded-3xl bg-white/95 px-6 py-5 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl lg:ml-auto">
+                        <article className="group relative hidden max-w-3xl rounded-3xl bg-white/95 px-6 py-5 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl lg:ml-auto lg:block">
                           {/* connector from line to card */}
                           <div className="pointer-events-none absolute -left-8 top-1/2 hidden h-px w-8 -translate-y-1/2 bg-gradient-to-l from-[rgba(25,180,188,0.35)] to-transparent lg:block" />
                           <div className="flex items-start gap-4">
@@ -823,33 +823,65 @@ export default function Services() {
                       )}
                     </div>
 
-                    {/* Mobile / small screen card (full width) */}
+                    {/* Mobile / small screen card (full width) with connector arrow */}
                     <div className="lg:hidden">
-                      <article className="group relative mt-2 rounded-3xl bg-white/95 px-5 py-4 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-lg">
-                        <div className="flex items-start gap-3">
-                          <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-[rgba(233,118,43,0.08)]">
-                            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[color:#e9762b] text-white">
-                              <JourneyIcon index={index} />
+                      <div className="flex flex-col items-stretch">
+                        <article className="group relative mt-2 rounded-3xl bg-white/95 px-5 py-4 text-left shadow-sm ring-1 ring-slate-100 transition-all duration-200 hover:-translate-y-1.5 hover:shadow-lg">
+                          <div className="flex items-start gap-3">
+                            <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-[rgba(233,118,43,0.08)]">
+                              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[color:#e9762b] text-white">
+                                <JourneyIcon index={index} />
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center justify-between gap-3">
+                                <h3
+                                  className="text-[13px] font-semibold sm:text-sm"
+                                  style={{ color: "#19b4bc" }}
+                                >
+                                  {step.title}
+                                </h3>
+                                <span className="rounded-full bg-orange-50 px-2.5 py-1 text-[10px] font-medium text-[color:#e9762b] shadow-sm">
+                                  {step.duration}
+                                </span>
+                              </div>
+                              <p className="mt-1.5 text-[11px] leading-relaxed text-slate-700">
+                                {step.description}
+                              </p>
                             </div>
                           </div>
-                          <div className="flex-1">
-                            <div className="flex items-center justify-between gap-3">
-                              <h3
-                                className="text-[13px] font-semibold sm:text-sm"
-                                style={{ color: "#19b4bc" }}
-                              >
-                                {step.title}
-                              </h3>
-                              <span className="rounded-full bg-orange-50 px-2.5 py-1 text-[10px] font-medium text-[color:#e9762b] shadow-sm">
-                                {step.duration}
-                              </span>
+                        </article>
+
+                        {index < journeySteps.length - 1 && (
+                          <div className="mt-2 flex items-center justify-center">
+                            <div className="flex flex-col items-center text-[rgba(233,118,43,0.9)]">
+                              {/* line above arrow */}
+                              <div className="h-4 w-px bg-gradient-to-b from-[rgba(233,118,43,0.3)] via-[rgba(233,118,43,0.18)] to-[rgba(233,118,43,0.08)]" />
+
+                              {/* arrow button */}
+                              <div className="mt-1 flex h-7 w-7 items-center justify-center rounded-full bg-[rgba(233,118,43,0.12)] shadow-sm ring-1 ring-[rgba(233,118,43,0.18)]">
+                                <svg
+                                  viewBox="0 0 24 24"
+                                  className="h-4 w-4"
+                                  aria-hidden
+                                >
+                                  <path
+                                    d="M7 10.5 12 15l5-4.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="1.6"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </svg>
+                              </div>
+
+                              {/* line below arrow */}
+                              <div className="mt-1 h-4 w-px bg-gradient-to-b from-[rgba(233,118,43,0.08)] via-[rgba(233,118,43,0.18)] to-[rgba(233,118,43,0.3)]" />
                             </div>
-                            <p className="mt-1.5 text-[11px] leading-relaxed text-slate-700">
-                              {step.description}
-                            </p>
                           </div>
-                        </div>
-                      </article>
+                        )}
+                      </div>
                     </div>
                   </div>
                 );
