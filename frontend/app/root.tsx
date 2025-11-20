@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { useState } from "react";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -46,6 +47,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navigationLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Services" },
+    { href: "/contact", label: "Contact Us" },
+  ];
+
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-slate-100 bg-white">
@@ -58,14 +68,10 @@ export default function App() {
             />
           </a>
 
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4">
+            {/* Desktop Navigation */}
             <div className="hidden items-center gap-3 text-[15px] font-medium md:flex">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/about", label: "About Us" },
-                { href: "/services", label: "Services" },
-                { href: "/contact", label: "Contact Us" },
-              ].map((link) => (
+              {navigationLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
@@ -81,17 +87,80 @@ export default function App() {
               ))}
             </div>
 
+            {/* Book Appointment Button */}
             <a
               href="https://lenamedical.com.au/appointments/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
+              className="hidden sm:inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
               style={{ backgroundColor: "#e9762b" }}
             >
               Book Appointment
             </a>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="inline-flex items-center justify-center rounded-lg p-2 text-[rgb(12,122,136)] hover:bg-slate-50 md:hidden"
+              aria-label="Toggle mobile menu"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isMobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
           </div>
         </nav>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="border-t border-slate-100 bg-white md:hidden">
+            <div className="mx-auto max-w-7xl px-6 py-4">
+              <div className="flex flex-col space-y-3">
+                {navigationLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="block rounded-lg px-4 py-3 text-[15px] font-medium text-[rgb(12,122,136)] transition-colors duration-150 hover:bg-slate-50 hover:text-[color:#19b4bc]"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <div className="pt-3 border-t border-slate-100">
+                  <a
+                    href="https://lenamedical.com.au/appointments/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block w-full rounded-full px-5 py-3 text-center text-sm font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
+                    style={{ backgroundColor: "#e9762b" }}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Book Appointment
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </header>
 
       <Outlet />
