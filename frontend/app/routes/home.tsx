@@ -83,20 +83,57 @@ export default function Home() {
             </div>
 
             <div className="relative flex items-center justify-center">
-              <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full blur-3xl opacity-50" style={{ backgroundColor: "#19b4bc55" }} />
-              <div className="absolute -bottom-12 -left-16 h-52 w-52 rounded-full blur-3xl opacity-50" style={{ backgroundColor: "#e9762b55" }} />
-
-              <div className="relative w-full max-w-md overflow-hidden rounded-[32px] bg-white shadow-xl ring-1 ring-black/5">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <video
-                    className="h-full w-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    controls={false}
-                    src="/vid/home-hero.mp4"
-                  />
+              {/* Enhanced animated background elements */}
+              <div className="absolute -top-12 -right-12 h-48 w-48 rounded-full blur-3xl opacity-40 animate-pulse" style={{ backgroundColor: "#19b4bc66" }} />
+              <div className="absolute -bottom-16 -left-20 h-60 w-60 rounded-full blur-3xl opacity-40 animate-pulse" style={{ backgroundColor: "#e9762b66", animationDelay: "1s" }} />
+              <div className="absolute top-20 -right-8 h-32 w-32 rounded-full blur-2xl opacity-30" style={{ backgroundColor: "#19b4bc44" }} />
+              
+              {/* Floating card with enhanced styling */}
+              <div className="relative w-full max-w-md transform transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2">
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-[#19b4bc] via-[#19b4bc80] to-[#e9762b] p-[2px] shadow-2xl">
+                  <div className="h-full w-full rounded-[38px] bg-white" />
+                </div>
+                
+                {/* Modern video container with glassmorphism */}
+                <div className="relative overflow-hidden rounded-[38px] bg-white/95 backdrop-blur-xl shadow-2xl ring-1 ring-white/30 border border-white/20">
+                  {/* Modern gradient overlay */}
+                  <div className="absolute inset-0 rounded-[38px] bg-gradient-to-br from-white/60 via-white/20 to-transparent pointer-events-none" />
+                  
+                  {/* Video container with modern frame */}
+                  <div className="relative p-3">
+                    <div className="aspect-[4/5] overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-50 to-white shadow-inner">
+                      {/* Video element */}
+                      <video
+                        className="h-full w-full object-cover transition-all duration-700 hover:scale-105 rounded-[32px]"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        controls={false}
+                        src="/vid/home-hero.mp4"
+                      />
+                      
+                      {/* Modern video overlay effects */}
+                      <div className="absolute inset-0 rounded-[32px] bg-gradient-to-t from-black/5 via-transparent to-white/10 pointer-events-none" />
+                    </div>
+                  </div>
+                  
+                  {/* Modern floating UI elements */}
+                  <div className="absolute top-6 right-6 flex items-center gap-2">
+                    <div className="h-2 w-2 rounded-full animate-pulse" style={{ backgroundColor: "#19b4bc" }} />
+                    <div className="h-1.5 w-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#e9762b", animationDelay: "0.5s" }} />
+                  </div>
+                  
+                  {/* Bottom modern accent */}
+                  <div className="absolute bottom-6 left-6 flex items-center gap-1.5">
+                    <div className="h-1 w-6 rounded-full bg-gradient-to-r from-[#19b4bc] to-[#e9762b] opacity-60" />
+                    <div className="h-1.5 w-1.5 rounded-full animate-bounce" style={{ backgroundColor: "#19b4bc", animationDelay: "1s" }} />
+                  </div>
+                  
+                  {/* Modern corner accents */}
+                  <div className="absolute top-0 right-0 h-8 w-8 bg-gradient-to-bl from-[#19b4bc]/20 to-transparent rounded-bl-2xl rounded-tr-[38px]" />
+                  <div className="absolute bottom-0 left-0 h-6 w-6 bg-gradient-to-tr from-[#e9762b]/20 to-transparent rounded-tr-2xl rounded-bl-[38px]" />
                 </div>
               </div>
             </div>
