@@ -1,0 +1,63 @@
+{
+  "_chunk-4WY6JWTD-BmR95V1R.js": {
+    "file": "js/chunk-4WY6JWTD-BmR95V1R.js",
+    "name": "chunk-4WY6JWTD"
+  },
+  "app/entry.client.tsx": {
+    "file": "js/entry.client-BEoLyGnd.js",
+    "name": "entry.client",
+    "src": "app/entry.client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_chunk-4WY6JWTD-BmR95V1R.js"
+    ]
+  },
+  "app/root.tsx?__react-router-build-client-route": {
+    "file": "js/root-BYK3LUdW.js",
+    "name": "root",
+    "src": "app/root.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-4WY6JWTD-BmR95V1R.js"
+    ],
+    "css": [
+      "css/root-BvoQiejM.css"
+    ]
+  },
+  "app/routes/about.tsx?__react-router-build-client-route": {
+    "file": "js/about-BdCkDg7G.js",
+    "name": "about",
+    "src": "app/routes/about.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-4WY6JWTD-BmR95V1R.js"
+    ]
+  },
+  "app/routes/contact.tsx?__react-router-build-client-route": {
+    "file": "js/contact-Db_36foz.js",
+    "name": "contact",
+    "src": "app/routes/contact.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-4WY6JWTD-BmR95V1R.js"
+    ]
+  },
+  "app/routes/home.tsx?__react-router-build-client-route": {
+    "file": "js/home-DFYoLLrO.js",
+    "name": "home",
+    "src": "app/routes/home.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-4WY6JWTD-BmR95V1R.js"
+    ]
+  },
+  "app/routes/services.tsx?__react-router-build-client-route": {
+    "file": "js/services-Uyz8Dr-d.js",
+    "name": "services",
+    "src": "app/routes/services.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-4WY6JWTD-BmR95V1R.js"
+    ]
+  }
+}

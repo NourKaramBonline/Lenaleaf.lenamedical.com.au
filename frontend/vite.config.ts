@@ -5,11 +5,12 @@ import react from '@vitejs/plugin-react';
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  base: '/',
   plugins: [react(), tailwindcss(), reactRouter(), tsconfigPaths()],
   build: {
     outDir: '../dist',
     emptyOutDir: true,
-    sourcemap: true,
+    sourcemap: false,
     rollupOptions: {
       output: {
         entryFileNames: 'assets/[name]-[hash].js',

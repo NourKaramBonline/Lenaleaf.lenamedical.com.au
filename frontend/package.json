@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:prod": "vite build --config vite.config.prod.ts",
     "preview": "vite preview",
-    "deploy": "npm run build && xcopy /E /I /Y dist\\* ..\\"
+    "deploy": "npm run build && xcopy /E /I /Y build\\client\\* ..\\",
+    "deploy:prod": "npm run build:prod && xcopy /E /I /Y dist\\* ..\\"
   },
   "dependencies": {
     "@react-router/dev": "^7.9.6",
