@@ -163,46 +163,62 @@ export default function Home() {
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <article className="group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md">
-            <div className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-teal-50" style={{ borderColor: "#19b4bc" }}>
-              <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#19b4bc" }} />
+          <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70">
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative z-10">
+              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md" style={{ borderColor: "#19b4bc" }}>
+                <span className="material-symbols-outlined" style={{ color: "#19b4bc", fontSize: "22px" }}>
+                  volunteer_activism
+                </span>
+              </div>
+              <h3 className="mb-3 text-base font-semibold" style={{ color: "#e9762b" }}>
+                Built for online care
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                Clear, mobile-friendly flows for learning about LENA Leaf and booking telehealth
+                consults from any device.
+              </p>
             </div>
-            <h3 className="mb-2 text-sm font-semibold" style={{ color: "#19b4bc" }}>
-              Built for online care
-            </h3>
-            <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-              Clear, mobile-friendly flows for learning about LENA Leaf and booking telehealth
-              consults from any device.
-            </p>
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }} />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r rounded-full" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }} />
           </article>
 
-          <article className="group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md">
-            <div className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-orange-50">
-              <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#e9762b" }} />
+          <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative z-10">
+              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md" style={{ borderColor: "#19b4bc" }}>
+                <img 
+                  src="/icon/apple-touch-icon.png" 
+                  alt="Lena Medical icon" 
+                  className="h-8 w-8 object-contain"
+                />
+              </div>
+              <h3 className="mb-3 text-base font-semibold" style={{ color: "#e9762b" }}>
+                Clearly linked to Lena Medical
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                Shares the same branding, tone and trust as Lena Medical, while focusing the
+                content purely on LENA Leaf services.
+              </p>
             </div>
-            <h3 className="mb-2 text-sm font-semibold" style={{ color: "#19b4bc" }}>
-              Clearly linked to Lena Medical
-            </h3>
-            <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-              Shares the same branding, tone and trust as Lena Medical, while focusing the
-              content purely on LENA Leaf services.
-            </p>
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(90deg, #e9762b, #19b4bc)" }} />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r rounded-full" style={{ backgroundImage: "linear-gradient(90deg, #e9762b, #19b4bc)" }} />
           </article>
 
-          <article className="group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md">
-            <div className="mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-50">
-              <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#19b4bc" }} />
+          <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70">
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative z-10">
+              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md" style={{ borderColor: "#19b4bc" }}>
+                <span className="material-symbols-outlined" style={{ color: "#19b4bc", fontSize: "22px" }}>
+                  cardiology
+                </span>
+              </div>
+              <h3 className="mb-3 text-base font-semibold" style={{ color: "#e9762b" }}>
+                Holistic Health Approach
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                Integrates natural and complementary therapies with conventional medical care for comprehensive wellness support.
+              </p>
             </div>
-            <h3 className="mb-2 text-sm font-semibold" style={{ color: "#19b4bc" }}>
-              Ready for future sections
-            </h3>
-            <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-              Structured so you can add more LENA Leaf information, FAQs and pathways later
-              without redesigning the page.
-            </p>
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #19b4bc)" }} />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r rounded-full" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }} />
           </article>
         </div>
       </section>
@@ -284,7 +300,7 @@ export default function Home() {
                   </div>
                 </>
               )}
-              <h3 className="mb-2 text-sm font-semibold" style={{ color: "#19b4bc" }}>
+              <h3 className="mb-2 text-sm font-semibold" style={{ color: "#e9762b" }}>
                 {title}
               </h3>
               <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
