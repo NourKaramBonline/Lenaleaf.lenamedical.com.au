@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import { useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,6 +11,27 @@ export function meta({}: Route.MetaArgs) {
     },
   ];
 }
+
+const testimonials = [
+  {
+    name: "Y.N.",
+    status: "Patient",
+    rating: 5,
+    text: "Very good service, convenient and very professional. I am lucky to have found you"
+  },
+  {
+    name: "M.J.",
+    status: "Patient",
+    rating: 5,
+    text: "The telehealth consultation was seamless. The practitioner took time to understand my concerns and provided holistic advice that complemented my existing treatment."
+  },
+  {
+    name: "A.K.",
+    status: "Patient", 
+    rating: 5,
+    text: "LENA Leaf made it so easy to access natural health support from home. The booking process was simple and the video call worked perfectly."
+  }
+];
 
 export default function Home() {
   return (
@@ -387,43 +409,75 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="testmonial px-6 pb-24 mx-auto max-w-7xl">
-        <div className="grid gap-8 rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-slate-100 md:grid-cols-[1.2fr_minmax(0,1fr)]">
-          <div className="space-y-4">
-            <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">
-              Patient experience
-            </p>
-            <h2
-              className="text-2xl font-semibold tracking-tight sm:text-3xl"
-              style={{ color: "#19b4bc" }}
-            >
-              Designed to feel personal, even online
-            </h2>
-            <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
-              While this is example content for now, it represents the type of story you may
-              feature later – highlighting how LENA Leaf helped a patient access care that fits
-              around their life.
-            </p>
-            <figure className="space-y-3">
-              <blockquote className="text-sm italic leading-relaxed text-slate-700">
-                “Booking my LENA Leaf consult was straightforward, and I felt listened to during
-                the video appointment. It was reassuring to get holistic advice without needing to
-                travel.”
+      {/* MODERN TESTIMONIAL SECTION - 3 CARDS */}
+      <section className="px-6 pb-24 mx-auto max-w-7xl">
+        <div className="text-center mb-16">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 mb-3">
+            <span style={{ color: "#e9762b" }}>LENA LEAF</span> Patient Testimonials
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4" style={{ color: "#19b4bc" }}>
+            What Our Patients Say
+          </h2>
+          <p className="text-base leading-relaxed text-slate-600 sm:text-lg mt-3 max-w-3xl mx-auto">
+            Real experiences from patients who have used LENA Leaf's telehealth services
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
+          {/* Testimonial 1 */}
+          <div className="group relative h-full">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#19b4bc] to-[#e9762b] rounded-3xl opacity-0 group-hover:opacity-20 transition duration-300"></div>
+            <div className="relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full flex flex-col">
+              <div className="mb-6">
+                <h4 className="font-semibold text-slate-900 text-lg" style={{ color: "#19b4bc" }}>Y.N.</h4>
+                <p className="text-sm text-slate-500">Patient</p>
+              </div>
+              <div className="flex mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <span key={star} className="text-xl" style={{ color: "#e9762b" }}>★</span>
+                ))}
+              </div>
+              <blockquote className="text-slate-700 leading-relaxed italic flex-grow">
+                "Very good service, convenient and very professional. I am lucky to have found you"
               </blockquote>
-              <figcaption className="text-xs font-medium text-slate-600">
-                — Future LENA Leaf patient
-              </figcaption>
-            </figure>
+            </div>
           </div>
 
-          <div className="flex items-center justify-center">
-            <div
-              className="relative h-48 w-full max-w-sm overflow-hidden rounded-3xl bg-gradient-to-br from-[rgba(25,180,188,0.1)] via-white to-[rgba(233,118,43,0.15)] p-[1px] shadow-md"
-            >
-              <div className="flex h-full w-full items-center justify-center rounded-[22px] bg-white/95 px-6 py-6 text-center text-xs leading-relaxed text-slate-700 sm:text-sm">
-                This area can later be replaced with a photo or illustration that matches the
-                patient stories shown here, aligned with the main Lena Medical site.
+          {/* Testimonial 2 */}
+          <div className="group relative h-full">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#19b4bc] to-[#e9762b] rounded-3xl opacity-0 group-hover:opacity-20 transition duration-300"></div>
+            <div className="relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full flex flex-col">
+              <div className="mb-6">
+                <h4 className="font-semibold text-slate-900 text-lg" style={{ color: "#19b4bc" }}>M.J.</h4>
+                <p className="text-sm text-slate-500">Patient</p>
               </div>
+              <div className="flex mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <span key={star} className="text-xl" style={{ color: "#e9762b" }}>★</span>
+                ))}
+              </div>
+              <blockquote className="text-slate-700 leading-relaxed italic flex-grow">
+                "The telehealth consultation was seamless. The practitioner took time to understand my concerns and provided holistic advice that complemented my existing treatment."
+              </blockquote>
+            </div>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div className="group relative h-full">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#19b4bc] to-[#e9762b] rounded-3xl opacity-0 group-hover:opacity-20 transition duration-300"></div>
+            <div className="relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full flex flex-col">
+              <div className="mb-6">
+                <h4 className="font-semibold text-slate-900 text-lg" style={{ color: "#19b4bc" }}>A.K.</h4>
+                <p className="text-sm text-slate-500">Patient</p>
+              </div>
+              <div className="flex mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <span key={star} className="text-xl" style={{ color: "#e9762b" }}>★</span>
+                ))}
+              </div>
+              <blockquote className="text-slate-700 leading-relaxed italic flex-grow">
+                "LENA Leaf made it so easy to access natural health support from home. The booking process was simple and the video call worked perfectly."
+              </blockquote>
             </div>
           </div>
         </div>

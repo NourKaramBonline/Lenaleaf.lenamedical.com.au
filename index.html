@@ -41,6 +41,7 @@
         function App() {
             const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
             const [currentPage, setCurrentPage] = useState('home');
+            const [testimonialSlide, setTestimonialSlide] = useState(0);
 
             // Simple routing based on URL
             useEffect(() => {
@@ -280,32 +281,45 @@
                             "This dedicated experience makes it easier for patients to understand what LENA Leaf offers, check whether they're eligible, and book the right appointment without getting lost in a general medical website.")
                     ),
                     React.createElement('div', { className: "mt-10 grid gap-6 md:grid-cols-3" },
-                        React.createElement('article', { className: "group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md" },
-                            React.createElement('div', { className: "mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-teal-50", style: { borderColor: "#19b4bc" } },
-                                React.createElement('span', { className: "h-2.5 w-2.5 rounded-full", style: { backgroundColor: "#19b4bc" } })
+                        React.createElement('article', { className: "group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70" },
+                            React.createElement('div', { className: "absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" }),
+                            React.createElement('div', { className: "relative z-10" },
+                                React.createElement('div', { className: "mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md", style: { borderColor: "#19b4bc" } },
+                                    React.createElement('span', { className: "material-symbols-outlined", style: { color: "#19b4bc", fontSize: "22px" } }, "volunteer_activism")
+                                ),
+                                React.createElement('h3', { className: "mb-3 text-base font-semibold", style: { color: "#e9762b" } }, "Built for online care"),
+                                React.createElement('p', { className: "text-sm leading-relaxed text-slate-600" },
+                                    "Clear, mobile-friendly flows for learning about LENA Leaf and booking telehealth consults from any device.")
                             ),
-                            React.createElement('h3', { className: "mb-2 text-sm font-semibold", style: { color: "#19b4bc" } }, "Built for online care"),
-                            React.createElement('p', { className: "text-xs leading-relaxed text-slate-700 sm:text-sm" },
-                                "Clear, mobile-friendly flows for learning about LENA Leaf and booking telehealth consults from any device."),
-                            React.createElement('div', { className: "pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r", style: { backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" } })
+                            React.createElement('div', { className: "pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r rounded-full", style: { backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" } })
                         ),
-                        React.createElement('article', { className: "group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md" },
-                            React.createElement('div', { className: "mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-orange-50" },
-                                React.createElement('span', { className: "h-2.5 w-2.5 rounded-full", style: { backgroundColor: "#e9762b" } })
+                        React.createElement('article', { className: "group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70" },
+                            React.createElement('div', { className: "absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" }),
+                            React.createElement('div', { className: "relative z-10" },
+                                React.createElement('div', { className: "mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md", style: { borderColor: "#19b4bc" } },
+                                    React.createElement('img', {
+                                        src: "/icon/apple-touch-icon.png",
+                                        alt: "Lena Medical icon",
+                                        className: "h-8 w-8 object-contain"
+                                    })
+                                ),
+                                React.createElement('h3', { className: "mb-3 text-base font-semibold", style: { color: "#e9762b" } }, "Clearly linked to Lena Medical"),
+                                React.createElement('p', { className: "text-sm leading-relaxed text-slate-600" },
+                                    "Shares the same branding, tone and trust as Lena Medical, while focusing the content purely on LENA Leaf services.")
                             ),
-                            React.createElement('h3', { className: "mb-2 text-sm font-semibold", style: { color: "#19b4bc" } }, "Clearly linked to Lena Medical"),
-                            React.createElement('p', { className: "text-xs leading-relaxed text-slate-700 sm:text-sm" },
-                                "Shares the same branding, tone and trust as Lena Medical, while focusing the content purely on LENA Leaf services."),
-                            React.createElement('div', { className: "pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r", style: { backgroundImage: "linear-gradient(90deg, #e9762b, #19b4bc)" } })
+                            React.createElement('div', { className: "pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r rounded-full", style: { backgroundImage: "linear-gradient(90deg, #e9762b, #19b4bc)" } })
                         ),
-                        React.createElement('article', { className: "group relative overflow-hidden rounded-2xl bg-white/90 p-6 shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md" },
-                            React.createElement('div', { className: "mb-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-50" },
-                                React.createElement('span', { className: "h-2.5 w-2.5 rounded-full", style: { backgroundColor: "#19b4bc" } })
+                        React.createElement('article', { className: "group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70" },
+                            React.createElement('div', { className: "absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" }),
+                            React.createElement('div', { className: "relative z-10" },
+                                React.createElement('div', { className: "mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md", style: { borderColor: "#19b4bc" } },
+                                    React.createElement('span', { className: "material-symbols-outlined", style: { color: "#19b4bc", fontSize: "22px" } }, "cardiology")
+                                ),
+                                React.createElement('h3', { className: "mb-3 text-base font-semibold", style: { color: "#e9762b" } }, "Holistic Health Approach"),
+                                React.createElement('p', { className: "text-sm leading-relaxed text-slate-600" },
+                                    "Integrates natural and complementary therapies with conventional medical care for comprehensive wellness support.")
                             ),
-                            React.createElement('h3', { className: "mb-2 text-sm font-semibold", style: { color: "#19b4bc" } }, "Holistic Health Approach"),
-                            React.createElement('p', { className: "text-xs leading-relaxed text-slate-700 sm:text-sm" },
-                                "Integrates natural and complementary therapies with conventional medical care for comprehensive wellness support."),
-                            React.createElement('div', { className: "pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r", style: { backgroundImage: "linear-gradient(90deg, #19b4bc, #19b4bc)" } })
+                            React.createElement('div', { className: "pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r rounded-full", style: { backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" } })
                         )
                     )
                 ),
@@ -428,29 +442,99 @@
                         )
                     )
                 ),
-                React.createElement('section', { className: "testmonial px-6 pb-24 mx-auto max-w-7xl" },
-                    React.createElement('div', { className: "grid gap-8 rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-slate-100 md:grid-cols-[1.2fr_minmax(0,1fr)]" },
-                        React.createElement('div', { className: "space-y-4" },
-                            React.createElement('p', { className: "text-xs font-semibold tracking-[0.18em] uppercase text-slate-500" }, "Patient experience"),
-                            React.createElement('h2', {
-                                className: "text-2xl font-semibold tracking-tight sm:text-3xl",
-                                style: { color: "#19b4bc" }
-                            }, "Designed to feel personal, even online"),
-                            React.createElement('p', { className: "text-sm leading-relaxed text-slate-700 sm:text-base" },
-                                "While this is example content for now, it represents the type of story you may feature later – highlighting how LENA Leaf helped a patient access care that fits around their life."),
-                            React.createElement('figure', { className: "space-y-3" },
-                                React.createElement('blockquote', { className: "text-sm italic leading-relaxed text-slate-700" },
-                                    "Booking my LENA Leaf consult was straightforward, and I felt listened to during the video appointment. It was reassuring to get holistic advice without needing to travel."
+                React.createElement('section', { className: "px-6 pb-24 mx-auto max-w-7xl" },
+                    React.createElement('div', { className: "text-center mb-16" },
+                        React.createElement('p', { className: "text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 mb-3" }, 
+                            React.createElement('span', { style: { color: "#e9762b" } }, "LENA LEAF"),
+                            " Patient Testimonials"
+                        ),
+                        React.createElement('h2', {
+                            className: "text-3xl font-bold tracking-tight sm:text-4xl mb-4",
+                            style: { color: "#19b4bc" }
+                        }, "What Our Patients Say"),
+                        React.createElement('p', { className: "text-base leading-relaxed text-slate-600 sm:text-lg mt-3 max-w-3xl mx-auto" },
+                            "Real experiences from patients who have used LENA Leaf's telehealth services")
+                    ),
+                    React.createElement('div', { className: "grid gap-8 lg:grid-cols-3 md:grid-cols-2" },
+                        // Testimonial 1
+                        React.createElement('div', { className: "group relative h-full" },
+                            React.createElement('div', { 
+                                className: "absolute -inset-1 bg-gradient-to-r from-[#19b4bc] to-[#e9762b] rounded-3xl opacity-0 group-hover:opacity-20 transition duration-300" 
+                            }),
+                            React.createElement('div', { className: "relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full flex flex-col" },
+                                React.createElement('div', { className: "mb-6" },
+                                    React.createElement('h4', { 
+                                        className: "font-semibold text-slate-900 text-lg",
+                                        style: { color: "#19b4bc" }
+                                    }, "Y.N."),
+                                    React.createElement('p', { className: "text-sm text-slate-500" }, "Patient")
                                 ),
-                                React.createElement('figcaption', { className: "text-xs font-medium text-slate-600" }, "— Future LENA Leaf patient")
+                                React.createElement('div', { className: "flex mb-4" },
+                                    [1,2,3,4,5].map((star) =>
+                                        React.createElement('span', {
+                                            key: star,
+                                            className: "text-xl",
+                                            style: { color: "#e9762b" }
+                                        }, "★")
+                                    )
+                                ),
+                                React.createElement('blockquote', { 
+                                    className: "text-slate-700 leading-relaxed italic flex-grow" 
+                                }, "Very good service, convenient and very professional. I am lucky to have found you")
                             )
                         ),
-                        React.createElement('div', { className: "flex items-center justify-center" },
-                            React.createElement('div', {
-                                className: "relative h-48 w-full max-w-sm overflow-hidden rounded-3xl bg-gradient-to-br from-[rgba(25,180,188,0.1)] via-white to-[rgba(233,118,43,0.15)] p-[1px] shadow-md"
-                            },
-                                React.createElement('div', { className: "flex h-full w-full items-center justify-center rounded-[22px] bg-white/95 px-6 py-6 text-center text-xs leading-relaxed text-slate-700 sm:text-sm" },
-                                    "This area can later be replaced with a photo or illustration that matches the patient stories shown here, aligned with the main Lena Medical site.")
+                        // Testimonial 2
+                        React.createElement('div', { className: "group relative h-full" },
+                            React.createElement('div', { 
+                                className: "absolute -inset-1 bg-gradient-to-r from-[#19b4bc] to-[#e9762b] rounded-3xl opacity-0 group-hover:opacity-20 transition duration-300" 
+                            }),
+                            React.createElement('div', { className: "relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full flex flex-col" },
+                                React.createElement('div', { className: "mb-6" },
+                                    React.createElement('h4', { 
+                                        className: "font-semibold text-slate-900 text-lg",
+                                        style: { color: "#19b4bc" }
+                                    }, "M.J."),
+                                    React.createElement('p', { className: "text-sm text-slate-500" }, "Patient")
+                                ),
+                                React.createElement('div', { className: "flex mb-4" },
+                                    [1,2,3,4,5].map((star) =>
+                                        React.createElement('span', {
+                                            key: star,
+                                            className: "text-xl",
+                                            style: { color: "#e9762b" }
+                                        }, "★")
+                                    )
+                                ),
+                                React.createElement('blockquote', { 
+                                    className: "text-slate-700 leading-relaxed italic flex-grow" 
+                                }, "The telehealth consultation was seamless. The practitioner took time to understand my concerns and provided holistic advice that complemented my existing treatment.")
+                            )
+                        ),
+                        // Testimonial 3
+                        React.createElement('div', { className: "group relative h-full" },
+                            React.createElement('div', { 
+                                className: "absolute -inset-1 bg-gradient-to-r from-[#19b4bc] to-[#e9762b] rounded-3xl opacity-0 group-hover:opacity-20 transition duration-300" 
+                            }),
+                            React.createElement('div', { className: "relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 h-full flex flex-col" },
+                                React.createElement('div', { className: "mb-6" },
+                                    React.createElement('h4', { 
+                                        className: "font-semibold text-slate-900 text-lg",
+                                        style: { color: "#19b4bc" }
+                                    }, "A.K."),
+                                    React.createElement('p', { className: "text-sm text-slate-500" }, "Patient")
+                                ),
+                                React.createElement('div', { className: "flex mb-4" },
+                                    [1,2,3,4,5].map((star) =>
+                                        React.createElement('span', {
+                                            key: star,
+                                            className: "text-xl",
+                                            style: { color: "#e9762b" }
+                                        }, "★")
+                                    )
+                                ),
+                                React.createElement('blockquote', { 
+                                    className: "text-slate-700 leading-relaxed italic flex-grow" 
+                                }, "LENA Leaf made it so easy to access natural health support from home. The booking process was simple and the video call worked perfectly.")
                             )
                         )
                     )
