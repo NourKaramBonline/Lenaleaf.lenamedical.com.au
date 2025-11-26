@@ -995,51 +995,94 @@ export default function Services() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] xl:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)]">
-            <article className="relative flex flex-col justify-between rounded-3xl bg-white/95 p-6 shadow-sm ring-1 ring-slate-100">
-              <div>
-                <div className="mb-4 flex items-center gap-2">
+            <article 
+              className="group relative flex flex-col justify-between rounded-3xl bg-gradient-to-br from-white via-[rgba(25,180,188,0.02)] to-[rgba(233,118,43,0.02)] p-8 shadow-xl ring-1 ring-transparent transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] hover:ring-2 hover:ring-[rgba(25,180,188,0.2)] overflow-hidden"
+            >
+              <div 
+                className="absolute inset-0 bg-gradient-to-br from-[#19b4bc]/5 via-transparent to-[#e9762b]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
+              />
+              <div 
+                className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#19b4bc]/20 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-x-4 group-hover:-translate-y-4" 
+              />
+              <div 
+                className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#e9762b]/20 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-translate-x-2 group-hover:translate-y-2" 
+              />
+              <div className="relative z-10">
+                <div className="mb-6 flex items-center gap-3">
+                  <div 
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#19b4bc] to-[#15a2aa] shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" 
+                  >
+                    <span 
+                      className="material-symbols-outlined text-white text-xl" 
+                    >
+                      medical_services
+                    </span>
+                  </div>
                   <h3
-                    className="text-sm font-semibold sm:text-[15px]"
-                    style={{ color: "#19b4bc" }}
+                    className="text-lg font-bold bg-gradient-to-r from-[#19b4bc] to-[#e9762b] bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105"
                   >
                     Medical Team
                   </h3>
                 </div>
-                <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
+                <p 
+                  className="text-sm leading-relaxed text-slate-600 font-medium transition-colors duration-300 group-hover:text-slate-700" 
+                >
                   Experienced alternative medicine practitioners providing personalised care via
                   telehealth.
                 </p>
 
-                <div className="mt-5 grid gap-4 text-[11px] text-slate-600 sm:grid-cols-3">
-                  <div>
-                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">15+ years</p>
-                    <p className="text-[11px] text-slate-500">Combined experience</p>
+                <div 
+                  className="mt-6 grid gap-4 text-[11px] text-slate-600 sm:grid-cols-3" 
+                >
+                  <div 
+                    className="rounded-2xl bg-gradient-to-br from-[#19b4bc]/10 to-[#19b4bc]/5 p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:from-[#19b4bc]/15 hover:to-[#19b4bc]/8" 
+                  >
+                    <p className="text-lg font-bold" style={{ color: "#19b4bc" }}>15+</p>
+                    <p className="text-xs font-medium" style={{ color: "#19b4bc" }}>Combined experience</p>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">4.9</p>
-                    <p className="text-[11px] text-slate-500">Average rating*</p>
+                  <div 
+                    className="rounded-2xl bg-gradient-to-br from-[#e9762b]/10 to-[#e9762b]/5 p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:from-[#e9762b]/15 hover:to-[#e9762b]/8" 
+                  >
+                    <div className="flex items-center justify-center gap-1">
+                      {Array.from({length: 5}, (_, i) => 
+                        <span 
+                          key={i}
+                          className="material-symbols-outlined text-sm"
+                          style={{ color: i < 4 ? "#e9762b" : "#e5e7eb" }}
+                        >
+                          {i < 4 ? "star" : "star_outline"}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs font-medium mt-1" style={{ color: "#e9762b" }}>4.9 Rating</p>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold text-[rgb(12,122,136)]">2</p>
-                    <p className="text-[11px] text-slate-500">Languages</p>
+                  <div 
+                    className="rounded-2xl bg-gradient-to-br from-[#f59e0b]/10 to-[#f59e0b]/5 p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:from-[#f59e0b]/15 hover:to-[#f59e0b]/8" 
+                  >
+                    <p className="text-lg font-bold" style={{ color: "#f59e0b" }}>2</p>
+                    <p className="text-xs font-medium" style={{ color: "#f59e0b" }}>Languages</p>
                   </div>
                 </div>
 
-                <div className="mt-5 space-y-3 text-[11px]">
+                <div className="mt-6 space-y-4 text-[11px]">
                   <div>
-                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                    <p 
+                      className="mb-2 text-[11px] font-bold uppercase tracking-[0.16em]" 
+                      style={{ color: "#19b4bc" }} 
+                    >
                       Specialties
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {[
                         "Alternative medicine",
-                        "Chronic disease management",
+                        "Chronic disease",
                         "Anxiety & stress",
                         "Sleep support",
                       ].map((label) => (
                         <span
                           key={label}
-                          className="rounded-full bg-teal-50 px-3 py-1 text-[11px] font-medium text-[rgb(12,122,136)] ring-1 ring-[rgba(25,180,188,0.15)]"
+                          className="rounded-full bg-gradient-to-r from-[#19b4bc]/10 to-[#19b4bc]/5 px-3 py-1.5 text-[11px] font-medium transition-all duration-300 hover:scale-105 hover:shadow-md hover:from-[#19b4bc]/20 hover:to-[#19b4bc]/10 cursor-pointer"
+                          style={{ color: "#19b4bc", border: "1px solid rgba(25,180,188,0.2)" }}
                         >
                           {label}
                         </span>
@@ -1048,14 +1091,18 @@ export default function Services() {
                   </div>
 
                   <div>
-                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                    <p 
+                      className="mb-2 text-[11px] font-bold uppercase tracking-[0.16em]" 
+                      style={{ color: "#e9762b" }} 
+                    >
                       Languages
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {["English", "Arabic"].map((label) => (
+                      {["English", "Australian"].map((label) => (
                         <span
                           key={label}
-                          className="rounded-full bg-slate-50 px-3 py-1 text-[11px] font-medium text-[rgb(12,122,136)] ring-1 ring-slate-200"
+                          className="rounded-full bg-gradient-to-r from-[#e9762b]/10 to-[#e9762b]/5 px-3 py-1.5 text-[11px] font-medium transition-all duration-300 hover:scale-105 hover:shadow-md hover:from-[#e9762b]/20 hover:to-[#e9762b]/10 cursor-pointer"
+                          style={{ color: "#e9762b", border: "1px solid rgba(233,118,43,0.2)" }}
                         >
                           {label}
                         </span>
@@ -1065,14 +1112,23 @@ export default function Services() {
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center justify-between text-[11px] text-slate-500">
-                <span>*Indicative rating based on patient feedback.</span>
+              <div 
+                className="relative z-10 mt-6 flex items-center justify-between text-[11px] text-slate-500" 
+              >
+                <span 
+                  className="transition-colors duration-300 group-hover:text-slate-600" 
+                >
+                  *Indicative rating based on patient feedback.
+                </span>
                 <a
                   href="https://lenamedical.com.au/appointments/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full px-5 py-2 text-[11px] font-semibold text-white shadow-sm transition-transform duration-150 hover:scale-[1.02]"
-                  style={{ backgroundColor: "#e9762b" }}
+                  className="inline-flex items-center justify-center rounded-full px-6 py-3 text-[11px] font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group-hover:px-7 group-hover:py-3.5"
+                  style={{ 
+                    background: "linear-gradient(135deg, #e9762b, #d86a25)",
+                    boxShadow: "0 4px 20px rgba(233,118,43,0.25)"
+                  }}
                 >
                   Book a consultation
                 </a>
@@ -1085,41 +1141,84 @@ export default function Services() {
                   title: "Medical Education",
                   description:
                     "Our practitioners are graduates of respected medical or health schools with training in both conventional and natural medicine.",
+                  icon: "school",
+                  color: "#19b4bc"
                 },
                 {
                   title: "Specialisations",
                   description:
                     "Team of clinicians with expertise in chronic disease management, holistic wellness and evidence-informed natural therapies.",
+                  icon: "psychology",
+                  color: "#e9762b"
                 },
                 {
                   title: "Comprehensive Care",
                   description:
                     "Experience across primary care, emergency medicine and integrative approaches for complex conditions.",
+                  icon: "health_and_safety",
+                  color: "#f59e0b"
                 },
                 {
                   title: "Multicultural Practice",
                   description:
                     "Multilingual team able to provide culturally sensitive care to our diverse patient community.",
+                  icon: "diversity_3",
+                  color: "#8b5cf6"
                 },
-              ].map((item) => (
+              ].map((item, index) => (
                 <article
                   key={item.title}
-                  className="relative flex flex-col rounded-3xl bg-white/95 p-5 text-left shadow-sm ring-1 ring-slate-100"
+                  className="group relative flex flex-col rounded-3xl bg-gradient-to-br from-white via-[rgba(25,180,188,0.02)] to-[rgba(233,118,43,0.02)] p-6 text-left shadow-xl ring-1 ring-transparent transition-all duration-500 hover:shadow-2xl hover:scale-[1.03] hover:ring-2 overflow-hidden"
                 >
-                  <h3
-                    className="mb-2 text-sm font-semibold sm:text-[15px]"
-                    style={{ color: "#19b4bc" }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-                    {item.description}
-                  </p>
-
-                  <div
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
-                    style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }}
+                  <div 
+                    className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{ background: `linear-gradient(135deg, ${item.color}10, ${item.color}05)` }}
                   />
+                  <div 
+                    className="absolute top-0 right-0 w-20 h-20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-x-2 group-hover:-translate-y-2"
+                    style={{ background: `linear-gradient(135deg, ${item.color}30, transparent)` }}
+                  />
+                  <div className="relative z-10">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div 
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-xl shadow-md transition-all duration-300 group-hover:scale-110 group-hover:rotate-12"
+                        style={{ 
+                          background: `linear-gradient(135deg, ${item.color}22, ${item.color}44)`,
+                          border: `1px solid ${item.color}33`
+                        }}
+                      >
+                        <span 
+                          className="material-symbols-outlined text-lg"
+                          style={{ color: item.color }}
+                        >
+                          {item.icon}
+                        </span>
+                      </div>
+                      <h3
+                        className="text-sm font-bold bg-gradient-to-r bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105"
+                        style={{ backgroundImage: `linear-gradient(90deg, ${item.color}, ${item.color}dd)` }}
+                      >
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p 
+                      className="text-xs leading-relaxed text-slate-600 font-medium transition-colors duration-300 group-hover:text-slate-700" 
+                    >
+                      {item.description}
+                    </p>
+                    <div 
+                      className="mt-4 flex items-center gap-2" 
+                    >
+                      <div 
+                        className="flex-1 h-0.5 bg-gradient-to-r rounded-full transition-all duration-500 group-hover:h-1"
+                        style={{ backgroundImage: `linear-gradient(90deg, ${item.color}33, ${item.color})` }}
+                      />
+                      <div 
+                        className="w-2 h-2 rounded-full transition-all duration-300 group-hover:scale-150"
+                        style={{ backgroundColor: item.color }}
+                      />
+                    </div>
+                  </div>
                 </article>
               ))}
             </div>
