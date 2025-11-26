@@ -14,7 +14,7 @@ export function meta({}: Route.MetaArgs) {
 export default function About() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <section className="lena-Leaf-alternative-medicine px-6 pt-10 pb-16 lg:pt-14 lg:pb-20">
+      <section className="lena-Leaf-alternative-medicine px-6 pt-10 pb-16 lg:pt-14 lg:pb-20" style={{ background: "radial-gradient(circle at top left, rgba(25,180,188,0.16), transparent 55%), radial-gradient(circle at bottom right, rgba(233,118,43,0.16), transparent 55%), linear-gradient(135deg, #f4fbfc, #fdf7f2)" }}>
         <div className="max-w-3xl mx-auto space-y-6 text-center">
           <p className="text-xs font-semibold tracking-[0.18em] uppercase text-slate-500">
             About

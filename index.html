@@ -219,8 +219,8 @@
                                         onClick: () => window.open("https://lenamedical.com.au/appointments/", "_blank")
                                     }, "Book a LENA Leaf consult"),
                                     React.createElement('button', {
-                                        className: "inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold rounded-full bg-white shadow-sm ring-1 ring-inset transition-colors duration-150 hover:bg-orange-50 cursor-pointer",
-                                        style: { borderColor: "#e9762b", color: "#e9762b" },
+                                        className: "inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold rounded-full bg-white shadow-sm transition-all duration-150 hover:bg-orange-50 hover:scale-[1.02] cursor-pointer",
+                                        style: { borderWidth: "2px", borderColor: "#e9762b", color: "#e9762b" },
                                         onClick: () => window.location.href = "/about"
                                     }, "Learn more about eligibility")
                                 ),
@@ -249,6 +249,16 @@
                                     React.createElement('div', { className: "relative overflow-hidden rounded-[38px] bg-white/95 backdrop-blur-xl shadow-2xl ring-1 ring-white/30 border border-white/20" },
                                         React.createElement('div', { className: "absolute inset-0 rounded-[38px] bg-gradient-to-br from-white/60 via-white/20 to-transparent pointer-events-none" }),
                                         React.createElement('div', { className: "relative p-3" },
+                                            // Top-right colored dots
+                                            React.createElement('div', { className: "absolute top-6 right-6 flex items-center gap-2 z-10" },
+                                                React.createElement('div', { className: "h-2 w-2 rounded-full animate-pulse", style: { backgroundColor: "#19b4bc" } }),
+                                                React.createElement('div', { className: "h-1.5 w-1.5 rounded-full animate-pulse", style: { backgroundColor: "#e9762b", animationDelay: "0.5s" } })
+                                            ),
+                                            // Bottom-left bar and dot
+                                            React.createElement('div', { className: "absolute bottom-6 left-6 flex items-center gap-1.5 z-10" },
+                                                React.createElement('div', { className: "h-1 w-6 rounded-full bg-gradient-to-r from-[#19b4bc] to-[#e9762b] opacity-60" }),
+                                                React.createElement('div', { className: "h-1.5 w-1.5 rounded-full animate-bounce", style: { backgroundColor: "#19b4bc", animationDelay: "1s" } })
+                                            ),
                                             React.createElement('div', { className: "aspect-[4/5] overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-50 to-white shadow-inner" },
                                                 React.createElement('video', {
                                                     className: "h-full w-full object-cover transition-all duration-700 hover:scale-105 rounded-[32px]",
@@ -296,11 +306,11 @@
                         React.createElement('article', { className: "group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70" },
                             React.createElement('div', { className: "absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" }),
                             React.createElement('div', { className: "relative z-10" },
-                                React.createElement('div', { className: "mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md", style: { borderColor: "#19b4bc" } },
+                                React.createElement('div', { className: "mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#19b4bc] to-[#15a2aa] shadow-lg", style: { boxShadow: "0 4px 20px rgba(25, 180, 188, 0.25)" } },
                                     React.createElement('img', {
                                         src: "/icon/apple-touch-icon.png",
                                         alt: "Lena Medical icon",
-                                        className: "h-8 w-8 object-contain"
+                                        className: "h-8 w-8 object-contain filter brightness-0 invert"
                                     })
                                 ),
                                 React.createElement('h3', { className: "mb-3 text-base font-semibold", style: { color: "#e9762b" } }, "Clearly linked to Lena Medical"),
@@ -312,8 +322,8 @@
                         React.createElement('article', { className: "group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70" },
                             React.createElement('div', { className: "absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" }),
                             React.createElement('div', { className: "relative z-10" },
-                                React.createElement('div', { className: "mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md", style: { borderColor: "#19b4bc" } },
-                                    React.createElement('span', { className: "material-symbols-outlined", style: { color: "#19b4bc", fontSize: "22px" } }, "cardiology")
+                                React.createElement('div', { className: "mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#19b4bc] to-[#15a2aa] shadow-lg", style: { boxShadow: "0 4px 20px rgba(25, 180, 188, 0.25)" } },
+                                    React.createElement('span', { className: "material-symbols-outlined text-white text-xl" }, "cardiology")
                                 ),
                                 React.createElement('h3', { className: "mb-3 text-base font-semibold", style: { color: "#e9762b" } }, "Holistic Health Approach"),
                                 React.createElement('p', { className: "text-sm leading-relaxed text-slate-600" },
@@ -543,7 +553,7 @@
 
             // About Page Component - Using your actual content
             const AboutPage = () => React.createElement('main', { className: "min-h-screen bg-white text-slate-900" },
-                React.createElement('section', { className: "lena-Leaf-alternative-medicine px-6 pt-10 pb-16 mx-auto max-w-7xl lg:pt-14 lg:pb-20" },
+                React.createElement('section', { className: "lena-Leaf-alternative-medicine px-6 pt-10 pb-16 lg:pt-14 lg:pb-20", style: { background: "radial-gradient(circle at top left, rgba(25,180,188,0.16), transparent 55%), radial-gradient(circle at bottom right, rgba(233,118,43,0.16), transparent 55%), linear-gradient(135deg, #f4fbfc, #fdf7f2)" } },
                     React.createElement('div', { className: "max-w-3xl mx-auto space-y-6 text-center" },
                         React.createElement('p', { className: "text-xs font-semibold tracking-[0.18em] uppercase text-slate-500" },
                             "About ",

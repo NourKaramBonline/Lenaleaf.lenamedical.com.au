@@ -78,8 +78,9 @@ export default function Home() {
                   Book a LENA Leaf consult
                 </button>
                 <button
-                  className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold rounded-full bg-white shadow-sm ring-1 ring-inset transition-colors duration-150 hover:bg-orange-50 cursor-pointer"
+                  className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold rounded-full bg-white shadow-sm transition-all duration-150 hover:bg-orange-50 hover:scale-[1.02] cursor-pointer"
                   style={{
+                    borderWidth: "2px",
                     borderColor: "#e9762b",
                     color: "#e9762b",
                   }}
@@ -207,11 +208,11 @@ export default function Home() {
           <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative z-10">
-              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md" style={{ borderColor: "#19b4bc" }}>
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#19b4bc] to-[#15a2aa] shadow-lg" style={{ boxShadow: "0 4px 20px rgba(25, 180, 188, 0.25)" }}>
                 <img 
                   src="/icon/apple-touch-icon.png" 
                   alt="Lena Medical icon" 
-                  className="h-8 w-8 object-contain"
+                  className="h-8 w-8 object-contain filter brightness-0 invert"
                 />
               </div>
               <h3 className="mb-3 text-base font-semibold" style={{ color: "#e9762b" }}>
@@ -228,8 +229,8 @@ export default function Home() {
           <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70">
             <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative z-10">
-              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md" style={{ borderColor: "#19b4bc" }}>
-                <span className="material-symbols-outlined" style={{ color: "#19b4bc", fontSize: "22px" }}>
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#19b4bc] to-[#15a2aa] shadow-lg" style={{ boxShadow: "0 4px 20px rgba(25, 180, 188, 0.25)" }}>
+                <span className="material-symbols-outlined text-white text-xl">
                   cardiology
                 </span>
               </div>
