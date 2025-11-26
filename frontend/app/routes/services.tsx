@@ -546,7 +546,7 @@ export default function Services() {
                 </a>
                 <a
                   href="/about"
-                  className="inline-flex cursor-pointer items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold shadow-sm ring-1 ring-inset transition-colors duration-150 hover:bg-orange-50"
+                  className="inline-flex cursor-pointer items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold shadow-sm border-2 transition-colors duration-150 hover:bg-orange-50"
                   style={{ borderColor: "#e9762b", color: "#e9762b" }}
                 >
                   Learn more about LENA Leaf
@@ -564,27 +564,27 @@ export default function Services() {
                 style={{ backgroundColor: "#e9762b55" }}
               />
 
-              <div className="relative w-full max-w-md overflow-hidden rounded-[32px] bg-white shadow-xl ring-1 ring-black/5">
+              <div className="relative w-full max-w-md overflow-hidden rounded-[32px] bg-white shadow-xl ring-1 ring-black/5 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-[#19b4bc]/30 group">
                 <div className="bg-gradient-to-br from-[rgba(25,180,188,0.08)] via-white to-[rgba(233,118,43,0.12)] p-6">
-                  <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
+                  <p className="text-xs leading-relaxed bg-gradient-to-r from-[#e9762b] via-[#19b4bc] to-[#e9762b] bg-clip-text text-transparent sm:text-sm">
                     Each service area is delivered via secure online consultations, with a focus on
                     personalised care plans that respect your preferences and existing medical
                     treatments.
                   </p>
                   <div className="mt-4 grid grid-cols-2 gap-3 text-[11px] text-slate-600">
-                    <div className="rounded-2xl bg-white/80 p-3 shadow-sm ring-1 ring-slate-100">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+                    <div className="rounded-2xl bg-gradient-to-br from-[#e9762b]/10 to-[#e9762b]/5 p-3 shadow-sm ring-1 ring-[#e9762b]/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:ring-[#e9762b]/40 hover:bg-gradient-to-br hover:from-[#e9762b]/15 hover:to-[#e9762b]/8 cursor-pointer">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] transition-colors duration-300" style={{ color: "#e9762b" }}>
                         Focused support
                       </p>
-                      <p className="mt-1 text-xs text-slate-700">
+                      <p className="mt-1 text-xs transition-colors duration-300" style={{ color: "#e9762b" }}>
                         Tailored to sleep, stress, digestion, chronic illness and more.
                       </p>
                     </div>
-                    <div className="rounded-2xl bg-white/80 p-3 shadow-sm ring-1 ring-slate-100">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+                    <div className="rounded-2xl bg-gradient-to-br from-[#19b4bc]/10 to-[#19b4bc]/5 p-3 shadow-sm ring-1 ring-[#19b4bc]/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:ring-[#19b4bc]/40 hover:bg-gradient-to-br hover:from-[#19b4bc]/15 hover:to-[#19b4bc]/8 cursor-pointer">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] transition-colors duration-300" style={{ color: "#19b4bc" }}>
                         Natural approach
                       </p>
-                      <p className="mt-1 text-xs text-slate-700">
+                      <p className="mt-1 text-xs transition-colors duration-300" style={{ color: "#19b4bc" }}>
                         Integrating herbal medicine, nutrition and lifestyle care.
                       </p>
                     </div>

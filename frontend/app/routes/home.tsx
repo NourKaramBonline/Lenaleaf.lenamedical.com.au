@@ -185,23 +185,23 @@ export default function Home() {
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70">
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#19b4bc]/10 via-white to-[#e9762b]/10 p-7 shadow-xl ring-2 ring-[#19b4bc]/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-[#e9762b]/30">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#19b4bc]/20 via-transparent to-[#e9762b]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative z-10">
-              <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 shadow-md" style={{ borderColor: "#19b4bc" }}>
-                <span className="material-symbols-outlined" style={{ color: "#19b4bc", fontSize: "22px" }}>
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#19b4bc] to-[#15a2aa] shadow-lg" style={{ boxShadow: "0 4px 20px rgba(25, 180, 188, 0.25)" }}>
+                <span className="material-symbols-outlined text-white text-xl">
                   volunteer_activism
                 </span>
               </div>
-              <h3 className="mb-3 text-base font-semibold" style={{ color: "#e9762b" }}>
+              <h3 className="mb-3 text-lg font-bold bg-gradient-to-r from-[#19b4bc] to-[#e9762b] bg-clip-text text-transparent">
                 Built for online care
               </h3>
-              <p className="text-sm leading-relaxed text-slate-600">
+              <p className="text-sm leading-relaxed text-slate-700 font-medium">
                 Clear, mobile-friendly flows for learning about LENA Leaf and booking telehealth
                 consults from any device.
               </p>
             </div>
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r rounded-full" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }} />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r rounded-full" style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }} />
           </article>
 
           <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm p-7 shadow-lg ring-1 ring-slate-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-slate-300/70">
