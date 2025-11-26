@@ -1701,28 +1701,10 @@
 
             // Contact Page Component - Using your actual content
             const ContactPage = () => {
-                // Force background style injection
-                useEffect(() => {
-                    const style = document.createElement('style');
-                    style.textContent = `
-                        .contact-page-gradient {
-                            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #4f5256 100%) !important;
-                            background-color: #f8fafc !important;
-                            background-image: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #4f5256 100%) !important;
-                        }
-                    `;
-                    document.head.appendChild(style);
-                    return () => {
-                        document.head.removeChild(style);
-                    };
-                }, []);
-                
                 return React.createElement('main', { 
-                    className: "min-h-screen text-slate-900 contact-page-gradient",
+                    className: "min-h-screen text-slate-900",
                     style: { 
-                        background: "linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #4f5256 100%) !important",
-                        backgroundColor: "#f8fafc !important",
-                        backgroundImage: "linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #4f5256 100%) !important"
+                        background: "radial-gradient(circle at top left, rgba(25,180,188,0.16), transparent 55%), radial-gradient(circle at bottom right, rgba(233,118,43,0.16), transparent 55%), linear-gradient(135deg, #f4fbfc, #fdf7f2)"
                     }
                 },
                 React.createElement('section', { className: "px-6 pt-10 pb-12 mx-auto max-w-7xl lg:pt-14 lg:pb-16" },

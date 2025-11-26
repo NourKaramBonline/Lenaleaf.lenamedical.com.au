@@ -13,7 +13,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 text-slate-900">
+    <main className="min-h-screen text-slate-900" style={{ background: "radial-gradient(circle at top left, rgba(25,180,188,0.16), transparent 55%), radial-gradient(circle at bottom right, rgba(233,118,43,0.16), transparent 55%), linear-gradient(135deg, #f4fbfc, #fdf7f2)" }}>
       <section className="px-6 pt-10 pb-12 mx-auto max-w-7xl lg:pt-14 lg:pb-16">
         <div className="space-y-12">
           {/* Header and Contact Info Section */}
