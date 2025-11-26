@@ -246,7 +246,7 @@ export default function About() {
           <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-[#f0fdf4] p-8 shadow-xl ring-1 ring-[#19b4bc]/20 transform hover:scale-105 hover:shadow-2xl transition-all duration-500 hover:ring-2 hover:ring-[#19b4bc]/40">
             <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#19b4bc] to-[#15a2aa] shadow-lg mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
               <span className="material-symbols-outlined text-2xl text-white">
-                eco
+                cannabis
               </span>
             </div>
             <h3 className="text-xl font-bold bg-gradient-to-r from-[#19b4bc] to-[#15a2aa] bg-clip-text text-transparent mb-4 group-hover:scale-105 transition-transform duration-300">
@@ -274,7 +274,7 @@ export default function About() {
           <article className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-[#f0fdf4] p-8 shadow-xl ring-1 ring-[#19b4bc]/20 transform hover:scale-105 hover:shadow-2xl transition-all duration-500 hover:ring-2 hover:ring-[#19b4bc]/40">
             <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#19b4bc] to-[#15a2aa] shadow-lg mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
               <span className="material-symbols-outlined text-2xl text-white">
-                healing
+                cardiology
               </span>
             </div>
             <h3 className="text-xl font-bold bg-gradient-to-r from-[#19b4bc] to-[#15a2aa] bg-clip-text text-transparent mb-4 group-hover:scale-105 transition-transform duration-300">
