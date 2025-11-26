@@ -1245,41 +1245,71 @@ export default function Services() {
               title: "AHPRA registered",
               description:
                 "All clinicians are registered with AHPRA and qualified to provide telehealth services in Australia.",
+              icon: "verified_user",
+              color: "teal",
+              bgGradient: "from-teal-500/20 to-teal-600/10"
             },
             {
               title: "Secure platform",
               description:
                 "Your health information is protected with bank-level security and HIPAA-compliant telehealth technology.",
+              icon: "shield_lock",
+              color: "orange",
+              bgGradient: "from-orange-500/20 to-orange-600/10"
             },
             {
               title: "Growing network",
               description:
                 "An expanding network of healthcare professionals and services to support diverse health needs.",
+              icon: "trending_up",
+              color: "teal",
+              bgGradient: "from-teal-500/20 to-teal-600/10"
             },
           ].map((item, idx) => (
             <article
               key={item.title}
-              className="group relative flex flex-col items-center rounded-3xl bg-white/95 p-6 text-center shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+              className={`group relative flex flex-col items-center rounded-3xl bg-gradient-to-br from-white via-${item.color}-50/20 to-${item.color}-50/30 p-8 text-center shadow-xl ring-1 ring-transparent transition-all duration-500 hover:shadow-2xl hover:scale-[1.05] hover:ring-2 hover:ring-${item.color}-200 overflow-hidden`}
             >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-teal-50 text-[16px] font-semibold text-[rgb(12,122,136)]">
-                {idx === 0 && "✔"}
-                {idx === 1 && "🔒"}
-                {idx === 2 && "↗"}
-              </div>
-              <h3
-                className="mb-2 text-sm font-semibold sm:text-[15px]"
-                style={{ color: "#19b4bc" }}
-              >
-                {item.title}
-              </h3>
-              <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">
-                {item.description}
-              </p>
-
-              <div
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r"
-                style={{ backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }}
+              <div 
+                className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{ background: `linear-gradient(135deg, ${item.color === 'teal' ? '#14b8a6' : item.color === 'orange' ? '#f97316' : '#10b981'}10, ${item.color === 'teal' ? '#14b8a6' : item.color === 'orange' ? '#f97316' : '#10b981'}05)` }}
               />
+              <div 
+                className="absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-x-2 group-hover:-translate-y-2"
+                style={{ background: `linear-gradient(135deg, ${item.color === 'teal' ? '#14b8a6' : item.color === 'orange' ? '#f97316' : '#10b981'}30, transparent)` }}
+              />
+              <div 
+                className="absolute bottom-0 left-0 w-16 h-16 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-translate-x-1 group-hover:translate-y-1"
+                style={{ background: `linear-gradient(135deg, ${item.color === 'teal' ? '#14b8a6' : item.color === 'orange' ? '#f97316' : '#10b981'}20, transparent)` }}
+              />
+              <div className="relative z-10">
+                <div 
+                  className={`mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${item.bgGradient} shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-xl`}
+                >
+                  <span 
+                    className={`material-symbols-outlined text-3xl text-${item.color}-600`}
+                  >
+                    {item.icon}
+                  </span>
+                </div>
+                <h3
+                  className={`mb-3 text-lg font-bold bg-gradient-to-r bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105 from-${item.color}-600 to-${item.color}-500`}
+                >
+                  {item.title}
+                </h3>
+                <p 
+                  className="text-sm leading-relaxed text-slate-600 font-medium transition-colors duration-300 group-hover:text-slate-700 mb-4"
+                >
+                  {item.description}
+                </p>
+                <div 
+                  className="mt-auto flex items-center justify-center"
+                >
+                  <div 
+                    className={`w-3 h-3 rounded-full transition-all duration-300 group-hover:scale-150 bg-${item.color}-500 shadow-md group-hover:shadow-lg`}
+                  />
+                </div>
+              </div>
             </article>
           ))}
         </div>

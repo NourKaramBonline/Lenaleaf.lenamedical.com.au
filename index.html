@@ -1435,41 +1435,121 @@
                         }, "Built on clinical standards and secure telehealth")
                     ),
                     React.createElement('div', { className: "mt-10 grid gap-8 md:grid-cols-3" },
-                        [
-                            {
-                                title: "AHPRA registered",
-                                description: "All clinicians are registered with AHPRA and qualified to provide telehealth services in Australia."
-                            },
-                            {
-                                title: "Secure platform",
-                                description: "Your health information is protected with bank-level security and HIPAA-compliant telehealth technology."
-                            },
-                            {
-                                title: "Growing network",
-                                description: "An expanding network of healthcare professionals and services to support diverse health needs."
-                            }
-                        ].map((item, idx) =>
                             React.createElement('article', {
-                                key: item.title,
-                                className: "group relative flex flex-col items-center rounded-3xl bg-white/95 p-6 text-center shadow-sm ring-1 ring-slate-100 transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+                                className: "group relative flex flex-col items-center rounded-3xl bg-gradient-to-br from-white via-teal-50/20 to-teal-50/30 p-8 text-center shadow-xl ring-1 ring-transparent transition-all duration-500 hover:shadow-2xl hover:scale-[1.05] hover:ring-2 hover:ring-teal-200 overflow-hidden"
                             },
-                                React.createElement('div', { className: "mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-teal-50 text-[16px] font-semibold text-[rgb(12,122,136)]" },
-                                    idx === 0 && "✔",
-                                    idx === 1 && "🔒",
-                                    idx === 2 && "↗"
-                                ),
-                                React.createElement('h3', {
-                                    className: "mb-2 text-sm font-semibold sm:text-[15px]",
-                                    style: { color: "#19b4bc" }
-                                }, item.title),
-                                React.createElement('p', { className: "text-xs leading-relaxed text-slate-700 sm:text-sm" }, item.description),
-                                React.createElement('div', {
-                                    className: "pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r",
-                                    style: { backgroundImage: "linear-gradient(90deg, #19b4bc, #e9762b)" }
-                                })
+                                React.createElement('div', { 
+                                    className: "absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+                                    style: { background: "linear-gradient(135deg, #14b8a610, #14b8a605)" }
+                                }),
+                                React.createElement('div', { 
+                                    className: "absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-x-2 group-hover:-translate-y-2",
+                                    style: { background: "linear-gradient(135deg, #14b8a630, transparent)" }
+                                }),
+                                React.createElement('div', { 
+                                    className: "absolute bottom-0 left-0 w-16 h-16 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-translate-x-1 group-hover:translate-y-1",
+                                    style: { background: "linear-gradient(135deg, #14b8a620, transparent)" }
+                                }),
+                                React.createElement('div', { className: "relative z-10" },
+                                    React.createElement('div', { 
+                                        className: "mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500/20 to-teal-600/10 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-xl" 
+                                    },
+                                        React.createElement('span', { 
+                                            className: "material-symbols-outlined text-3xl text-teal-600"
+                                        }, "verified_user")
+                                    ),
+                                    React.createElement('h3', {
+                                        className: "mb-3 text-lg font-bold bg-gradient-to-r bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105 from-teal-600 to-teal-500"
+                                    }, "AHPRA registered"),
+                                    React.createElement('p', { 
+                                        className: "text-sm leading-relaxed text-slate-600 font-medium transition-colors duration-300 group-hover:text-slate-700 mb-4" 
+                                    }, "All clinicians are registered with AHPRA and qualified to provide telehealth services in Australia."),
+                                    React.createElement('div', { 
+                                        className: "mt-auto flex items-center justify-center" 
+                                    },
+                                        React.createElement('div', { 
+                                            className: "w-3 h-3 rounded-full transition-all duration-300 group-hover:scale-150 bg-teal-500 shadow-md group-hover:shadow-lg"
+                                        })
+                                    )
+                                )
+                            ),
+                            React.createElement('article', {
+                                className: "group relative flex flex-col items-center rounded-3xl bg-gradient-to-br from-white via-orange-50/20 to-orange-50/30 p-8 text-center shadow-xl ring-1 ring-transparent transition-all duration-500 hover:shadow-2xl hover:scale-[1.05] hover:ring-2 hover:ring-orange-200 overflow-hidden"
+                            },
+                                React.createElement('div', { 
+                                    className: "absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+                                    style: { background: "linear-gradient(135deg, #f9731610, #f9731605)" }
+                                }),
+                                React.createElement('div', { 
+                                    className: "absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-x-2 group-hover:-translate-y-2",
+                                    style: { background: "linear-gradient(135deg, #f9731630, transparent)" }
+                                }),
+                                React.createElement('div', { 
+                                    className: "absolute bottom-0 left-0 w-16 h-16 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-translate-x-1 group-hover:translate-y-1",
+                                    style: { background: "linear-gradient(135deg, #f9731620, transparent)" }
+                                }),
+                                React.createElement('div', { className: "relative z-10" },
+                                    React.createElement('div', { 
+                                        className: "mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500/20 to-orange-600/10 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-xl" 
+                                    },
+                                        React.createElement('span', { 
+                                            className: "material-symbols-outlined text-3xl text-orange-600"
+                                        }, "shield_lock")
+                                    ),
+                                    React.createElement('h3', {
+                                        className: "mb-3 text-lg font-bold bg-gradient-to-r bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105 from-orange-600 to-orange-500"
+                                    }, "Secure platform"),
+                                    React.createElement('p', { 
+                                        className: "text-sm leading-relaxed text-slate-600 font-medium transition-colors duration-300 group-hover:text-slate-700 mb-4" 
+                                    }, "Your health information is protected with bank-level security and HIPAA-compliant telehealth technology."),
+                                    React.createElement('div', { 
+                                        className: "mt-auto flex items-center justify-center" 
+                                    },
+                                        React.createElement('div', { 
+                                            className: "w-3 h-3 rounded-full transition-all duration-300 group-hover:scale-150 bg-orange-500 shadow-md group-hover:shadow-lg"
+                                        })
+                                    )
+                                )
+                            ),
+                            React.createElement('article', {
+                                className: "group relative flex flex-col items-center rounded-3xl bg-gradient-to-br from-white via-teal-50/20 to-teal-50/30 p-8 text-center shadow-xl ring-1 ring-transparent transition-all duration-500 hover:shadow-2xl hover:scale-[1.05] hover:ring-2 hover:ring-teal-200 overflow-hidden"
+                            },
+                                React.createElement('div', { 
+                                    className: "absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+                                    style: { background: "linear-gradient(135deg, #14b8a610, #14b8a605)" }
+                                }),
+                                React.createElement('div', { 
+                                    className: "absolute top-0 right-0 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:translate-x-2 group-hover:-translate-y-2",
+                                    style: { background: "linear-gradient(135deg, #14b8a630, transparent)" }
+                                }),
+                                React.createElement('div', { 
+                                    className: "absolute bottom-0 left-0 w-16 h-16 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-translate-x-1 group-hover:translate-y-1",
+                                    style: { background: "linear-gradient(135deg, #14b8a620, transparent)" }
+                                }),
+                                React.createElement('div', { className: "relative z-10" },
+                                    React.createElement('div', { 
+                                        className: "mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500/20 to-teal-600/10 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-xl" 
+                                    },
+                                        React.createElement('span', { 
+                                            className: "material-symbols-outlined text-3xl text-teal-600"
+                                        }, "trending_up")
+                                    ),
+                                    React.createElement('h3', {
+                                        className: "mb-3 text-lg font-bold bg-gradient-to-r bg-clip-text text-transparent transition-all duration-300 group-hover:scale-105 from-teal-600 to-teal-500"
+                                    }, "Growing network"),
+                                    React.createElement('p', { 
+                                        className: "text-sm leading-relaxed text-slate-600 font-medium transition-colors duration-300 group-hover:text-slate-700 mb-4" 
+                                    }, "An expanding network of healthcare professionals and services to support diverse health needs."),
+                                    React.createElement('div', { 
+                                        className: "mt-auto flex items-center justify-center" 
+                                    },
+                                        React.createElement('div', { 
+                                            className: "w-3 h-3 rounded-full transition-all duration-300 group-hover:scale-150 bg-teal-500 shadow-md group-hover:shadow-lg"
+                                        })
+                                    )
+                                )
                             )
                         )
-                    )
                 ),
                 React.createElement('section', { className: "cta-banner w-full py-14", style: { background: "linear-gradient(135deg, #eff9fb, #e1f3f7)" } },
                     React.createElement('div', { className: "mx-auto max-w-5xl px-6 text-center" },
