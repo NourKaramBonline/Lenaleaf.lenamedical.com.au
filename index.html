@@ -928,7 +928,7 @@
                             React.createElement('p', { className: "text-sm leading-relaxed text-slate-700 sm:text-base" },
                                 "These service categories help organise the types of support available through LENA Leaf. Your clinician will always recommend options that are safe and appropriate for you.")
                         ),
-                        React.createElement('p', { className: "mt-2 max-w-sm text-[11px] leading-relaxed text-slate-500" },
+                        React.createElement('p', { className: "mt-2 max-w-sm text-[11px] leading-relaxed", style: { color: "#19b4bc" } },
                             "Information here is general in nature and does not replace medical advice. Always speak with your healthcare provider about what is right for you.")
                     ),
                     React.createElement('div', { className: "mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3" },
@@ -971,8 +971,7 @@
                             }
                         ].map(service => {
                             const borderColor = service.accent === "teal" ? "#19b4bc" : 
-                                              service.accent === "orange" ? "#e9762b" : 
-                                              service.accent === "rose" ? "#f97373" : "#f59e0b";
+                                              (service.accent === "orange" || service.accent === "rose" || service.accent === "amber") ? "#e9762b" : "#f59e0b";
                             
                             return React.createElement('article', {
                                 key: service.name,
@@ -981,9 +980,28 @@
                                 React.createElement('div', { className: "flex items-start justify-between gap-4" },
                                     React.createElement('div', { className: "space-y-3" },
                                         React.createElement('div', {
-                                            className: "inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-50 text-[13px] font-semibold text-[rgb(12,122,136)]",
-                                            style: { borderTopColor: borderColor, borderWidth: 1 }
-                                        }, React.createElement('span', { className: "mt-[1px]" }, service.name.charAt(0))),
+                                            className: "inline-flex h-12 w-12 items-center justify-center rounded-2xl shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl group-hover:rotate-3",
+                                            style: { 
+                                                background: `linear-gradient(135deg, ${borderColor}22, ${borderColor}44)`,
+                                                border: `2px solid ${borderColor}`,
+                                                boxShadow: `0 4px 20px ${borderColor}33`
+                                            }
+                                        }, 
+                                            React.createElement('span', { 
+                                                className: "material-symbols-outlined text-xl",
+                                                style: { 
+                                                    color: borderColor,
+                                                    filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))'
+                                                }
+                                            }, 
+                                                service.name === "Herbal Medicine" ? "cannabis" :
+                                                service.name === "Sleep Disorders" ? "bedtime" :
+                                                service.name === "Chronic Illness" ? "cardiology" :
+                                                service.name === "Stress & Anxiety" ? "self_improvement" :
+                                                service.name === "Digestive Health" ? "no_food" :
+                                                service.name === "Nutritional Therapy" ? "nutrition" : "health_and_safety"
+                                            )
+                                        ),
                                         React.createElement('h3', {
                                             className: "text-sm font-semibold sm:text-[15px]",
                                             style: { color: "#19b4bc" }

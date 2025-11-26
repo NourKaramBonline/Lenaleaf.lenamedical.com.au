@@ -617,7 +617,7 @@ export default function Services() {
               you.
             </p>
           </div>
-          <p className="mt-2 max-w-sm text-[11px] leading-relaxed text-slate-500">
+          <p className="mt-2 max-w-sm text-[11px] leading-relaxed" style={{ color: "#19b4bc" }}>
             Information here is general in nature and does not replace medical advice. Always speak
             with your healthcare provider about what is right for you.
           </p>
@@ -628,10 +628,8 @@ export default function Services() {
             const borderColor =
               service.accent === "teal"
                 ? "#19b4bc"
-                : service.accent === "orange"
+                : (service.accent === "orange" || service.accent === "rose" || service.accent === "amber")
                 ? "#e9762b"
-                : service.accent === "rose"
-                ? "#f97373"
                 : "#f59e0b";
 
             return (
@@ -642,10 +640,27 @@ export default function Services() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="space-y-3">
                     <div
-                      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-50 text-[13px] font-semibold text-[rgb(12,122,136)]"
-                      style={{ borderTopColor: borderColor, borderWidth: 1 }}
+                      className="inline-flex h-12 w-12 items-center justify-center rounded-2xl shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl group-hover:rotate-3"
+                      style={{ 
+                        background: `linear-gradient(135deg, ${borderColor}22, ${borderColor}44)`,
+                        border: `2px solid ${borderColor}`,
+                        boxShadow: `0 4px 20px ${borderColor}33`
+                      }}
                     >
-                      <span className="mt-[1px]">{service.name.charAt(0)}</span>
+                      <span 
+                        className="material-symbols-outlined text-xl"
+                        style={{ 
+                            color: borderColor,
+                            filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))'
+                        }}
+                      >
+                        {service.name === "Herbal Medicine" ? "cannabis" :
+                         service.name === "Sleep Disorders" ? "bedtime" :
+                         service.name === "Chronic Illness" ? "cardiology" :
+                         service.name === "Stress & Anxiety" ? "self_improvement" :
+                         service.name === "Digestive Health" ? "no_food" :
+                         service.name === "Nutritional Therapy" ? "nutrition" : "health_and_safety"}
+                      </span>
                     </div>
                     <h3
                       className="text-sm font-semibold sm:text-[15px]"
