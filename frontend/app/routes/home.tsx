@@ -94,7 +94,7 @@ export default function Home() {
                   <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-teal-50" style={{ borderColor: "#19b4bc" }}>
                     <span className="h-2 w-2 rounded-full" style={{ backgroundColor: "#19b4bc" }} />
                   </span>
-                  <span>Bulk-billed for eligible patients</span>
+                  <span>Affordable telehealth consultations</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-50">
