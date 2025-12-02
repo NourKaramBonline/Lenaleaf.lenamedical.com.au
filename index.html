@@ -452,6 +452,666 @@
                         )
                     )
                 ),
+                // AI Questionnaire Section - Exact Copy from home.tsx
+                React.createElement('section', { className: "ai-questionnaire relative px-6 py-20 w-full overflow-hidden" },
+                    React.createElement('div', { className: "absolute inset-0 bg-gradient-to-br from-[#19b4bc]/5 via-transparent to-[#e9762b]/5 rounded-3xl" }),
+                    React.createElement('div', { className: "absolute top-10 right-10 w-32 h-32 bg-[#19b4bc]/10 rounded-full blur-3xl" }),
+                    React.createElement('div', { className: "absolute bottom-10 left-10 w-40 h-40 bg-[#e9762b]/10 rounded-full blur-3xl" }),
+                    
+                    React.createElement('div', { className: "relative z-10 mx-auto max-w-7xl" },
+                        React.createElement('div', { className: "text-center mb-16" },
+                            React.createElement('div', { className: "space-y-3 max-w-xl" },
+                                React.createElement('p', { className: "text-xs font-semibold tracking-[0.18em] uppercase text-slate-500" },
+                                    "AI-Powered Eligibility Check by",
+                                    React.createElement('span', { className: "ml-1", style: { color: "#e9762b" } }, "LENA Leaf")
+                                ),
+                                React.createElement('h2', {
+                                    className: "text-2xl font-semibold tracking-tight sm:text-3xl",
+                                    style: { color: "#19b4bc" }
+                                }, "Pre-Consultation Screening"),
+                                React.createElement('p', { className: "text-sm leading-relaxed text-slate-700 sm:text-base" },
+                                    "Get a smart assessment of your eligibility for medicinal cannabis consultation with our ",
+                                    "intelligent screening system. Quick, confidential, and designed for your peace of mind."
+                                )
+                            )
+                        ),
+                        
+                        React.createElement('div', { className: "flex justify-center" },
+                            React.createElement('div', { className: "relative group" },
+                                React.createElement('div', { 
+                                    className: "absolute -inset-1 bg-gradient-to-r from-[#19b4bc] via-[#19b4bc] to-[#e9762b] rounded-3xl opacity-20 group-hover:opacity-30 transition-all duration-500 blur-xl" 
+                                }),
+                                
+                                React.createElement('div', { 
+                                    className: "relative bg-white/95 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/50 transition-all duration-500 group-hover:shadow-3xl group-hover:scale-[1.02]" 
+                                },
+                                    React.createElement('div', { className: "absolute -top-8 left-1/2 transform -translate-x-1/2" },
+                                        React.createElement('div', { className: "relative" },
+                                            React.createElement('div', { 
+                                                className: "absolute inset-0 bg-gradient-to-br from-[#19b4bc] to-[#e9762b] rounded-2xl blur-lg opacity-50 animate-pulse" 
+                                            }),
+                                            React.createElement('div', { 
+                                                className: "relative bg-gradient-to-br from-[#19b4bc] to-[#e9762b] rounded-2xl p-4 shadow-xl transition-all duration-300 group-hover:scale-110" 
+                                            },
+                                                React.createElement('svg', { 
+                                                    className: "w-8 h-8 text-white", 
+                                                    fill: "none", 
+                                                    stroke: "currentColor", 
+                                                    viewBox: "0 0 24 24" 
+                                                },
+                                                    React.createElement('path', {
+                                                        strokeLinecap: "round",
+                                                        strokeLinejoin: "round",
+                                                        strokeWidth: 2,
+                                                        d: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                    })
+                                                )
+                                            )
+                                        )
+                                    ),
+                                    
+                                    React.createElement('div', { className: "text-center space-y-8 pt-8" },
+                                        React.createElement('div', null,
+                                            React.createElement('h3', { className: "text-2xl md:text-3xl font-bold mb-4" },
+                                                React.createElement('span', { 
+                                                    className: "bg-gradient-to-r from-[#19b4bc] to-[#e9762b] bg-clip-text text-transparent" 
+                                                }, "AI Eligibility Assessment")
+                                            ),
+                                            React.createElement('p', { className: "text-slate-600 leading-relaxed max-w-md mx-auto" },
+                                                "Our intelligent system will guide you through a series of questions to determine your potential eligibility. ",
+                                                "The process takes approximately 3-5 minutes and your responses are completely confidential."
+                                            )
+                                        ),
+                                        
+                                        React.createElement('div', { className: "grid grid-cols-3 gap-4 max-w-sm mx-auto" },
+                                            React.createElement('div', { className: "text-center" },
+                                                React.createElement('div', { 
+                                                    className: "w-12 h-12 mx-auto mb-2 rounded-full bg-[#19b4bc]/10 flex items-center justify-center" 
+                                                },
+                                                    React.createElement('svg', { 
+                                                        className: "w-5 h-5 text-[#19b4bc]", 
+                                                        fill: "none", 
+                                                        stroke: "currentColor", 
+                                                        viewBox: "0 0 24 24" 
+                                                    },
+                                                        React.createElement('path', {
+                                                            strokeLinecap: "round",
+                                                            strokeLinejoin: "round",
+                                                            strokeWidth: 2,
+                                                            d: "M13 10V3L4 14h7v7l9-11h-7z"
+                                                        })
+                                                    )
+                                                ),
+                                                React.createElement('p', { className: "text-xs text-slate-600" }, "Quick")
+                                            ),
+                                            React.createElement('div', { className: "text-center" },
+                                                React.createElement('div', { 
+                                                    className: "w-12 h-12 mx-auto mb-2 rounded-full bg-[#e9762b]/10 flex items-center justify-center" 
+                                                },
+                                                    React.createElement('svg', { 
+                                                        className: "w-5 h-5 text-[#e9762b]", 
+                                                        fill: "none", 
+                                                        stroke: "currentColor", 
+                                                        viewBox: "0 0 24 24" 
+                                                    },
+                                                        React.createElement('path', {
+                                                            strokeLinecap: "round",
+                                                            strokeLinejoin: "round",
+                                                            strokeWidth: 2,
+                                                            d: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                                        })
+                                                    )
+                                                ),
+                                                React.createElement('p', { className: "text-xs text-slate-600" }, "Private")
+                                            ),
+                                            React.createElement('div', { className: "text-center" },
+                                                React.createElement('div', { 
+                                                    className: "w-12 h-12 mx-auto mb-2 rounded-full bg-[#19b4bc]/10 flex items-center justify-center" 
+                                                },
+                                                    React.createElement('svg', { 
+                                                        className: "w-5 h-5 text-[#19b4bc]", 
+                                                        fill: "none", 
+                                                        stroke: "currentColor", 
+                                                        viewBox: "0 0 24 24" 
+                                                    },
+                                                        React.createElement('path', {
+                                                            strokeLinecap: "round",
+                                                            strokeLinejoin: "round",
+                                                            strokeWidth: 2,
+                                                            d: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                        })
+                                                    )
+                                                ),
+                                                React.createElement('p', { className: "text-xs text-slate-600" }, "Accurate")
+                                            )
+                                        ),
+                                        
+                                        React.createElement('div', { className: "pt-4" },
+                                            React.createElement('button', {
+                                                id: "start-assessment-btn",
+                                                className: "group relative inline-flex items-center justify-center px-10 py-4 text-sm font-semibold text-white rounded-full shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl overflow-hidden cursor-pointer",
+                                                style: { backgroundColor: "#19b4bc" },
+                                                onClick: function() {
+                                                    const modal = document.getElementById('questionnaire-modal');
+                                                    if (modal) modal.classList.remove('hidden');
+                                                }
+                                            },
+                                                React.createElement('div', { 
+                                                    className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" 
+                                                }),
+                                                
+                                                React.createElement('span', { className: "relative flex items-center gap-2" },
+                                                    React.createElement('span', null, "Start Assessment"),
+                                                    React.createElement('svg', { 
+                                                        className: "w-4 h-4 transition-transform duration-300 group-hover:translate-x-1", 
+                                                        fill: "none", 
+                                                        stroke: "currentColor", 
+                                                        viewBox: "0 0 24 24" 
+                                                    },
+                                                        React.createElement('path', {
+                                                            strokeLinecap: "round",
+                                                            strokeLinejoin: "round",
+                                                            strokeWidth: 2,
+                                                            d: "M9 5l7 7-7 7"
+                                                        })
+                                                    )
+                                                )
+                                            ),
+                                            
+                                            React.createElement('p', { className: "text-xs text-slate-500 mt-3" },
+                                                "No commitment • Takes 3-5 minutes • Instant results"
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                React.createElement('script', { dangerouslySetInnerHTML: { __html: `
+                    const questions = [
+                        "I am aged 18 years or older.",
+                        "I understand that this consultation is for alternative treatment evaluation (including medicinal cannabis) and not for a standard GP or general medical certificate consultation.",
+                        "My medical condition has been present for three months or longer (i.e., a chronic or persistent condition) and I have already received and completed previous treatments (such as medications, physiotherapy, injections, psychological therapy, specialist referral) with insufficient relief or intolerable side-effects.",
+                        "I have been informed that medicinal cannabis may be considered only after conventional therapies have been tried and found inadequate, in line with TGA guidance.",
+                        "I understand that although medicinal cannabis may offer benefit, the scientific evidence for many conditions remains limited, and it may not be appropriate for all patients.",
+                        "I do not currently have a diagnosis of schizophrenia, bipolar type 1 or 2, or have I experienced drug-induced psychosis.",
+                        "I do not have a current or recent history of substance abuse or illicit drug dependence.",
+                        "I am not currently pregnant, breastfeeding, or actively trying to conceive.",
+                        "I am aware of and accept the costs involved in the consultation and any follow-up visits or prescriptions.",
+                        "I understand and accept that state or territory laws (in addition to federal TGA regulations) may apply to the prescribing, dispensing, use and driving/operating machinery restrictions for medicinal cannabis in my jurisdiction.",
+                        "I understand that if my doctor wishes to prescribe a medicinal cannabis product not registered on the Australian Register of Therapeutic Goods (ARTG), it may require approval under the TGA's Special Access Scheme (SAS) or the Authorised Prescriber (AP) Scheme, and that supply may involve additional administrative steps.",
+                        "I understand that medicinal cannabis that contains THC may impair driving or operation of machinery, and I will discuss this with my doctor with respect to my situation.",
+                        "I consent to my medical practitioner reviewing my medical history, previous treatments, and discussing the potential benefits, risks and side-effects of medicinal cannabis treatment with me."
+                    ];
+
+                    let currentQuestionIndex = 0;
+                    let answers = {};
+
+                    // Make functions available globally immediately
+                    window.startQuestionnaire = function() {
+                        currentQuestionIndex = 0;
+                        answers = {};
+                        document.getElementById('questionnaire-modal').classList.remove('hidden');
+                        window.showQuestion();
+                    };
+
+                    window.showQuestion = function() {
+                        if (currentQuestionIndex < questions.length) {
+                            const progress = Math.round(((currentQuestionIndex + 1) / questions.length) * 100);
+                            document.getElementById('modal-title').textContent = \`Step \${currentQuestionIndex + 1} of \${questions.length}\`;
+                            document.getElementById('modal-question').textContent = questions[currentQuestionIndex];
+                            document.getElementById('current-question-number').textContent = currentQuestionIndex + 1;
+                            document.getElementById('progress-percentage').textContent = progress + '%';
+                            document.getElementById('progress-bar').style.width = progress + '%';
+                            
+                            const prevBtn = document.getElementById('prev-btn');
+                            if (currentQuestionIndex === 0) {
+                                prevBtn.style.display = 'none';
+                            } else {
+                                prevBtn.style.display = 'flex';
+                            }
+                        } else {
+                            window.showResults();
+                        }
+                    };
+
+                    window.previousQuestion = function() {
+                        if (currentQuestionIndex > 0) {
+                            currentQuestionIndex--;
+                            window.showQuestion();
+                        }
+                    };
+
+                    window.answerQuestion = function(answer) {
+                        answers[\`q\${currentQuestionIndex}\`] = answer;
+                        currentQuestionIndex++;
+                        
+                        if (currentQuestionIndex < questions.length) {
+                            window.showQuestion();
+                        } else {
+                            window.showResults();
+                        }
+                    };
+
+                    window.showResults = function() {
+                        document.getElementById('questionnaire-modal').classList.add('hidden');
+                        document.getElementById('results-modal').classList.remove('hidden');
+                        
+                        const eligible = answers.q0 === true && answers.q5 === true && answers.q6 === true;
+                        
+                        const resultIcon = document.getElementById('result-icon');
+                        const resultSvg = document.getElementById('result-svg');
+                        const resultTitle = document.getElementById('result-title');
+                        const resultMessage = document.getElementById('result-message');
+                        
+                        if (eligible) {
+                            resultIcon.style.backgroundColor = '#19b4bc';
+                            resultSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />';
+                            resultTitle.innerHTML = 'Likely Eligible';
+                            resultTitle.style.color = '#19b4bc';
+                            resultMessage.textContent = 'Based on your answers, you may be suitable for medicinal cannabis consultation.';
+                        } else {
+                            resultIcon.style.backgroundColor = '#e9762b';
+                            resultSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />';
+                            resultTitle.innerHTML = 'Requires Doctor Review';
+                            resultTitle.style.color = '#e9762b';
+                            resultMessage.textContent = 'Your case requires doctor evaluation before approval.';
+                        }
+                    };
+
+                    window.closeQuestionnaire = function() {
+                        document.getElementById('questionnaire-modal').classList.add('hidden');
+                        document.getElementById('results-modal').classList.add('hidden');
+                        currentQuestionIndex = 0;
+                        answers = {};
+                    };
+
+                    // Make variables available globally
+                    window.currentQuestionIndex = currentQuestionIndex;
+                    window.answers = answers;
+
+                    // Initialize on load
+                    document.addEventListener('DOMContentLoaded', function() {
+                        console.log('Questionnaire functions loaded');
+                        
+                        // Also add event listeners as backup
+                        const startBtn = document.getElementById('start-assessment-btn');
+                        const yesBtn = document.getElementById('yes-btn');
+                        const noBtn = document.getElementById('no-btn');
+                        const exitBtn2 = document.getElementById('exit-btn-2');
+                        const prevBtn = document.getElementById('prev-btn');
+                        const closeResultsBtn2 = document.getElementById('close-results-btn-2');
+                        const bookConsultationBtn = document.getElementById('book-consultation-btn');
+
+                        if (startBtn) startBtn.addEventListener('click', window.startQuestionnaire);
+                        if (yesBtn) yesBtn.addEventListener('click', () => window.answerQuestion(true));
+                        if (noBtn) noBtn.addEventListener('click', () => window.answerQuestion(false));
+                        if (exitBtn2) exitBtn2.addEventListener('click', window.closeQuestionnaire);
+                        if (prevBtn) prevBtn.addEventListener('click', window.previousQuestion);
+                        if (closeResultsBtn2) closeResultsBtn2.addEventListener('click', window.closeQuestionnaire);
+                        if (bookConsultationBtn) {
+                            bookConsultationBtn.addEventListener('click', function() {
+                                window.open('https://lenamedical.com.au/appointments/', '_blank');
+                            });
+                        }
+                    });
+                ` }}),
+                // Modal Container
+                React.createElement('div', { 
+                    id: "questionnaire-modal", 
+                    className: "fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden" 
+                },
+                    React.createElement('div', { 
+                        className: "relative bg-white/95 backdrop-blur-sm rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/50 h-[500px] flex flex-col" 
+                    },
+                        React.createElement('div', { className: "flex flex-col flex-1 h-full" },
+                            React.createElement('div', { className: "space-y-2 mb-6 flex-shrink-0" },
+                                React.createElement('div', { className: "flex justify-between text-xs text-slate-500" },
+                                    React.createElement('span', null, 
+                                        "Question ",
+                                        React.createElement('span', { id: "current-question-number" }, "1"),
+                                        " of 14"
+                                    ),
+                                    React.createElement('span', { id: "progress-percentage" }, "8%")
+                                ),
+                                React.createElement('div', { className: "h-2 bg-slate-200 rounded-full overflow-hidden" },
+                                    React.createElement('div', {
+                                        id: "progress-bar",
+                                        className: "h-full rounded-full transition-all duration-500 ease-out",
+                                        style: { 
+                                            width: "8%",
+                                            background: 'linear-gradient(90deg, #19b4bc, #e9762b)'
+                                        }
+                                    })
+                                )
+                            ),
+                            
+                            React.createElement('div', { className: "flex-1 flex flex-col justify-center min-h-0" },
+                                React.createElement('div', { 
+                                    className: "inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#19b4bc] to-[#e9762b] shadow-lg mx-auto mb-6" 
+                                },
+                                    React.createElement('svg', { 
+                                        className: "w-8 h-8 text-white", 
+                                        fill: "none", 
+                                        stroke: "currentColor", 
+                                        viewBox: "0 0 24 24" 
+                                    },
+                                        React.createElement('path', {
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            strokeWidth: 2,
+                                            d: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        })
+                                    )
+                                ),
+                                React.createElement('div', null,
+                                    React.createElement('h2', { 
+                                        id: "modal-title", 
+                                        className: "text-2xl font-bold bg-gradient-to-r from-[#19b4bc] to-[#e9762b] bg-clip-text text-transparent mb-3" 
+                                    }, "Step 1 of 13"),
+                                    React.createElement('p', { 
+                                        id: "modal-question", 
+                                        className: "text-slate-700 leading-relaxed min-h-[2rem] flex items-center justify-center text-center px-4 text-xs" 
+                                    }, "I am aged 18 years or older.")
+                                )
+                            ),
+                            
+                            React.createElement('div', { className: "space-y-4 flex-shrink-0" },
+                                React.createElement('div', { className: "flex gap-4" },
+                                    React.createElement('button', {
+                                        id: "yes-btn",
+                                        className: "group relative flex-1 inline-flex items-center justify-center px-6 py-4 text-sm font-semibold text-white rounded-full shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl overflow-hidden cursor-pointer",
+                                        style: { backgroundColor: "#19b4bc" },
+                                        onClick: function() {
+                                            const questions = [
+                                                "I am aged 18 years or older.",
+                                                "I understand that this consultation is for alternative treatment evaluation (including medicinal cannabis) and not for a standard GP or general medical certificate consultation.",
+                                                "My medical condition has been present for three months or longer (i.e., a chronic or persistent condition) and I have already received and completed previous treatments (such as medications, physiotherapy, injections, psychological therapy, specialist referral) with insufficient relief or intolerable side-effects.",
+                                                "I have been informed that medicinal cannabis may be considered only after conventional therapies have been tried and found inadequate, in line with TGA guidance.",
+                                                "I understand that although medicinal cannabis may offer benefit, the scientific evidence for many conditions remains limited, and it may not be appropriate for all patients.",
+                                                "I do not currently have a diagnosis of schizophrenia, bipolar type 1 or 2, or have I experienced drug-induced psychosis.",
+                                                "I do not have a current or recent history of substance abuse or illicit drug dependence.",
+                                                "I am not currently pregnant, breastfeeding, or actively trying to conceive.",
+                                                "I am aware of and accept the costs involved in the consultation and any follow-up visits or prescriptions.",
+                                                "I understand and accept that state or territory laws (in addition to federal TGA regulations) may apply to the prescribing, dispensing, use and driving/operating machinery restrictions for medicinal cannabis in my jurisdiction.",
+                                                "I understand that if my doctor wishes to prescribe a medicinal cannabis product not registered on the Australian Register of Therapeutic Goods (ARTG), it may require approval under the TGA's Special Access Scheme (SAS) or the Authorised Prescriber (AP) Scheme, and that supply may involve additional administrative steps.",
+                                                "I understand that medicinal cannabis that contains THC may impair driving or operation of machinery, and I will discuss this with my doctor with respect to my situation.",
+                                                "I consent to my medical practitioner reviewing my medical history, previous treatments, and discussing the potential benefits, risks and side-effects of medicinal cannabis treatment with me."
+                                            ];
+                                            
+                                            if (!window.currentQuestionIndex) window.currentQuestionIndex = 0;
+                                            if (!window.answers) window.answers = {};
+                                            
+                                            window.answers['q' + window.currentQuestionIndex] = true;
+                                            window.currentQuestionIndex++;
+                                            
+                                            if (window.currentQuestionIndex < questions.length) {
+                                                document.getElementById('modal-title').textContent = 'Step ' + (window.currentQuestionIndex + 1) + ' of ' + questions.length;
+                                                document.getElementById('modal-question').textContent = questions[window.currentQuestionIndex];
+                                                document.getElementById('current-question-number').textContent = window.currentQuestionIndex + 1;
+                                                const progress = Math.round(((window.currentQuestionIndex + 1) / questions.length) * 100);
+                                                document.getElementById('progress-percentage').textContent = progress + '%';
+                                                document.getElementById('progress-bar').style.width = progress + '%';
+                                                
+                                                const prevBtn = document.getElementById('prev-btn');
+                                                if (window.currentQuestionIndex > 0) {
+                                                    prevBtn.style.display = 'flex';
+                                                }
+                                            } else {
+                                                document.getElementById('questionnaire-modal').classList.add('hidden');
+                                                document.getElementById('results-modal').classList.remove('hidden');
+                                                
+                                                const eligible = window.answers.q0 === true && window.answers.q5 === true && window.answers.q6 === true;
+                                                const resultIcon = document.getElementById('result-icon');
+                                                const resultSvg = document.getElementById('result-svg');
+                                                const resultTitle = document.getElementById('result-title');
+                                                const resultMessage = document.getElementById('result-message');
+                                                
+                                                if (eligible) {
+                                                    resultIcon.style.backgroundColor = '#19b4bc';
+                                                    resultSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />';
+                                                    resultTitle.innerHTML = 'Likely Eligible';
+                                                    resultTitle.style.color = '#19b4bc';
+                                                    resultMessage.textContent = 'Based on your answers, you may be suitable for medicinal cannabis consultation.';
+                                                } else {
+                                                    resultIcon.style.backgroundColor = '#e9762b';
+                                                    resultSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />';
+                                                    resultTitle.innerHTML = 'Requires Doctor Review';
+                                                    resultTitle.style.color = '#e9762b';
+                                                    resultMessage.textContent = 'Your case requires doctor evaluation before approval.';
+                                                }
+                                            }
+                                        }
+                                    },
+                                        React.createElement('div', { 
+                                            className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" 
+                                        }),
+                                        React.createElement('span', { className: "relative" }, "Yes")
+                                    ),
+                                    React.createElement('button', {
+                                        id: "no-btn",
+                                        className: "group relative flex-1 inline-flex items-center justify-center px-6 py-4 text-sm font-semibold rounded-full bg-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl overflow-hidden cursor-pointer",
+                                        style: { borderWidth: "2px", borderColor: "#e9762b", color: "#e9762b" },
+                                        onClick: function() {
+                                            const questions = [
+                                                "I am aged 18 years or older.",
+                                                "I understand that this consultation is for alternative treatment evaluation (including medicinal cannabis) and not for a standard GP or general medical certificate consultation.",
+                                                "My medical condition has been present for three months or longer (i.e., a chronic or persistent condition) and I have already received and completed previous treatments (such as medications, physiotherapy, injections, psychological therapy, specialist referral) with insufficient relief or intolerable side-effects.",
+                                                "I have been informed that medicinal cannabis may be considered only after conventional therapies have been tried and found inadequate, in line with TGA guidance.",
+                                                "I understand that although medicinal cannabis may offer benefit, the scientific evidence for many conditions remains limited, and it may not be appropriate for all patients.",
+                                                "I do not currently have a diagnosis of schizophrenia, bipolar type 1 or 2, or have I experienced drug-induced psychosis.",
+                                                "I do not have a current or recent history of substance abuse or illicit drug dependence.",
+                                                "I am not currently pregnant, breastfeeding, or actively trying to conceive.",
+                                                "I am aware of and accept the costs involved in the consultation and any follow-up visits or prescriptions.",
+                                                "I understand and accept that state or territory laws (in addition to federal TGA regulations) may apply to the prescribing, dispensing, use and driving/operating machinery restrictions for medicinal cannabis in my jurisdiction.",
+                                                "I understand that if my doctor wishes to prescribe a medicinal cannabis product not registered on the Australian Register of Therapeutic Goods (ARTG), it may require approval under the TGA's Special Access Scheme (SAS) or the Authorised Prescriber (AP) Scheme, and that supply may involve additional administrative steps.",
+                                                "I understand that medicinal cannabis that contains THC may impair driving or operation of machinery, and I will discuss this with my doctor with respect to my situation.",
+                                                "I consent to my medical practitioner reviewing my medical history, previous treatments, and discussing the potential benefits, risks and side-effects of medicinal cannabis treatment with me."
+                                            ];
+                                            
+                                            if (!window.currentQuestionIndex) window.currentQuestionIndex = 0;
+                                            if (!window.answers) window.answers = {};
+                                            
+                                            window.answers['q' + window.currentQuestionIndex] = false;
+                                            window.currentQuestionIndex++;
+                                            
+                                            if (window.currentQuestionIndex < questions.length) {
+                                                document.getElementById('modal-title').textContent = 'Step ' + (window.currentQuestionIndex + 1) + ' of ' + questions.length;
+                                                document.getElementById('modal-question').textContent = questions[window.currentQuestionIndex];
+                                                document.getElementById('current-question-number').textContent = window.currentQuestionIndex + 1;
+                                                const progress = Math.round(((window.currentQuestionIndex + 1) / questions.length) * 100);
+                                                document.getElementById('progress-percentage').textContent = progress + '%';
+                                                document.getElementById('progress-bar').style.width = progress + '%';
+                                                
+                                                const prevBtn = document.getElementById('prev-btn');
+                                                if (window.currentQuestionIndex > 0) {
+                                                    prevBtn.style.display = 'flex';
+                                                }
+                                            } else {
+                                                document.getElementById('questionnaire-modal').classList.add('hidden');
+                                                document.getElementById('results-modal').classList.remove('hidden');
+                                                
+                                                const eligible = window.answers.q0 === true && window.answers.q5 === true && window.answers.q6 === true;
+                                                const resultIcon = document.getElementById('result-icon');
+                                                const resultSvg = document.getElementById('result-svg');
+                                                const resultTitle = document.getElementById('result-title');
+                                                const resultMessage = document.getElementById('result-message');
+                                                
+                                                if (eligible) {
+                                                    resultIcon.style.backgroundColor = '#19b4bc';
+                                                    resultSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />';
+                                                    resultTitle.innerHTML = 'Likely Eligible';
+                                                    resultTitle.style.color = '#19b4bc';
+                                                    resultMessage.textContent = 'Based on your answers, you may be suitable for medicinal cannabis consultation.';
+                                                } else {
+                                                    resultIcon.style.backgroundColor = '#e9762b';
+                                                    resultSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />';
+                                                    resultTitle.innerHTML = 'Requires Doctor Review';
+                                                    resultTitle.style.color = '#e9762b';
+                                                    resultMessage.textContent = 'Your case requires doctor evaluation before approval.';
+                                                }
+                                            }
+                                        }
+                                    },
+                                        React.createElement('div', { 
+                                            className: "absolute inset-0 bg-gradient-to-r from-transparent via-[#e9762b]/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" 
+                                        }),
+                                        React.createElement('span', { className: "relative" }, "No")
+                                    )
+                                ),
+                                React.createElement('div', { className: "flex items-center justify-between" },
+                                    React.createElement('button', {
+                                        id: "prev-btn",
+                                        className: "inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 transition-colors duration-200 cursor-pointer",
+                                        style: { display: 'none' },
+                                        onClick: function() {
+                                            const questions = [
+                                                "I am aged 18 years or older.",
+                                                "I understand that this consultation is for alternative treatment evaluation (including medicinal cannabis) and not for a standard GP or general medical certificate consultation.",
+                                                "My medical condition has been present for three months or longer (i.e., a chronic or persistent condition) and I have already received and completed previous treatments (such as medications, physiotherapy, injections, psychological therapy, specialist referral) with insufficient relief or intolerable side-effects.",
+                                                "I have been informed that medicinal cannabis may be considered only after conventional therapies have been tried and found inadequate, in line with TGA guidance.",
+                                                "I understand that although medicinal cannabis may offer benefit, the scientific evidence for many conditions remains limited, and it may not be appropriate for all patients.",
+                                                "I do not currently have a diagnosis of schizophrenia, bipolar type 1 or 2, or have I experienced drug-induced psychosis.",
+                                                "I do not have a current or recent history of substance abuse or illicit drug dependence.",
+                                                "I am not currently pregnant, breastfeeding, or actively trying to conceive.",
+                                                "I am aware of and accept the costs involved in the consultation and any follow-up visits or prescriptions.",
+                                                "I understand and accept that state or territory laws (in addition to federal TGA regulations) may apply to the prescribing, dispensing, use and driving/operating machinery restrictions for medicinal cannabis in my jurisdiction.",
+                                                "I understand that if my doctor wishes to prescribe a medicinal cannabis product not registered on the Australian Register of Therapeutic Goods (ARTG), it may require approval under the TGA's Special Access Scheme (SAS) or the Authorised Prescriber (AP) Scheme, and that supply may involve additional administrative steps.",
+                                                "I understand that medicinal cannabis that contains THC may impair driving or operation of machinery, and I will discuss this with my doctor with respect to my situation.",
+                                                "I consent to my medical practitioner reviewing my medical history, previous treatments, and discussing the potential benefits, risks and side-effects of medicinal cannabis treatment with me."
+                                            ];
+                                            
+                                            if (!window.currentQuestionIndex) window.currentQuestionIndex = 0;
+                                            if (!window.answers) window.answers = {};
+                                            
+                                            if (window.currentQuestionIndex > 0) {
+                                                window.currentQuestionIndex--;
+                                                document.getElementById('modal-title').textContent = 'Step ' + (window.currentQuestionIndex + 1) + ' of ' + questions.length;
+                                                document.getElementById('modal-question').textContent = questions[window.currentQuestionIndex];
+                                                document.getElementById('current-question-number').textContent = window.currentQuestionIndex + 1;
+                                                const progress = Math.round(((window.currentQuestionIndex + 1) / questions.length) * 100);
+                                                document.getElementById('progress-percentage').textContent = progress + '%';
+                                                document.getElementById('progress-bar').style.width = progress + '%';
+                                                
+                                                const prevBtn = document.getElementById('prev-btn');
+                                                if (window.currentQuestionIndex === 0) {
+                                                    prevBtn.style.display = 'none';
+                                                }
+                                            }
+                                        }
+                                    },
+                                        React.createElement('svg', { 
+                                            className: "w-4 h-4", 
+                                            fill: "none", 
+                                            stroke: "currentColor", 
+                                            viewBox: "0 0 24 24" 
+                                        },
+                                            React.createElement('path', {
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                strokeWidth: 2,
+                                                d: "M15 19l-7-7 7-7"
+                                            })
+                                        ),
+                                        "Previous"
+                                    ),
+                                    React.createElement('button', {
+                                        id: "exit-btn-2",
+                                        className: "text-sm text-slate-500 hover:text-slate-700 underline cursor-pointer",
+                                        onClick: function() {
+                                            document.getElementById('questionnaire-modal').classList.add('hidden');
+                                            document.getElementById('results-modal').classList.add('hidden');
+                                            window.currentQuestionIndex = 0;
+                                            window.answers = {};
+                                        }
+                                    }, "Exit Assessment")
+                                )
+                            )
+                        )
+                    )
+                ),
+                // Results Modal
+                React.createElement('div', { 
+                    id: "results-modal", 
+                    className: "fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden" 
+                },
+                    React.createElement('div', { 
+                        className: "relative bg-white/95 backdrop-blur-sm rounded-3xl p-8 max-w-md w-full shadow-2xl border border-white/50" 
+                    },
+                        React.createElement('div', { className: "text-center space-y-6" },
+                            React.createElement('div', { 
+                                id: "result-icon",
+                                className: "inline-flex h-16 w-16 items-center justify-center rounded-full shadow-lg mx-auto transition-all duration-300" 
+                            },
+                                React.createElement('svg', { 
+                                    id: "result-svg",
+                                    className: "w-8 h-8 text-white transition-all duration-300", 
+                                    fill: "none", 
+                                    stroke: "currentColor", 
+                                    viewBox: "0 0 24 24" 
+                                },
+                                    React.createElement('path', {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: 2,
+                                        d: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    })
+                                )
+                            ),
+                            React.createElement('div', null,
+                                React.createElement('h2', { 
+                                    id: "result-title",
+                                    className: "text-2xl font-bold mb-3 transition-all duration-300" 
+                                }, "Likely Eligible"),
+                                React.createElement('p', { 
+                                    id: "result-message",
+                                    className: "text-slate-700 leading-relaxed" 
+                                }, "Based on your answers, you may be suitable for medicinal cannabis consultation.")
+                            ),
+                            React.createElement('div', { className: "space-y-3" },
+                                React.createElement('button', {
+                                    id: "book-consultation-btn",
+                                    className: "w-full group relative inline-flex items-center justify-center px-6 py-4 text-sm font-semibold text-white rounded-full shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl overflow-hidden cursor-pointer",
+                                    style: { backgroundColor: "#19b4bc" },
+                                    onClick: function() {
+                                        window.open('https://lenamedical.com.au/appointments/', '_blank');
+                                    }
+                                },
+                                    React.createElement('div', { 
+                                        className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" 
+                                    }),
+                                    React.createElement('span', { className: "relative flex items-center gap-2" },
+                                        "Book Consultation Now",
+                                        React.createElement('svg', { 
+                                            className: "w-4 h-4", 
+                                            fill: "none", 
+                                            stroke: "currentColor", 
+                                            viewBox: "0 0 24 24" 
+                                        },
+                                            React.createElement('path', {
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                strokeWidth: 2,
+                                                d: "M9 5l7 7-7 7"
+                                            })
+                                        )
+                                    )
+                                ),
+                                React.createElement('button', {
+                                    id: "close-results-btn-2",
+                                    className: "w-full px-6 py-4 text-sm font-semibold rounded-full bg-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer",
+                                    style: { borderWidth: "2px", borderColor: "#19b4bc", color: "#19b4bc" },
+                                    onClick: function() {
+                                        document.getElementById('results-modal').classList.add('hidden');
+                                        window.currentQuestionIndex = 0;
+                                        window.answers = {};
+                                    }
+                                }, "Close")
+                            )
+                        )
+                    )
+                ),
                 React.createElement('section', { className: "px-6 pb-24 mx-auto max-w-7xl" },
                     React.createElement('div', { className: "text-center mb-16" },
                         React.createElement('p', { className: "text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 mb-3" }, 
