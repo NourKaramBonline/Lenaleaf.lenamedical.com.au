@@ -63,17 +63,17 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                       </svg>
                       <a
-                        href="mailto:reception@lenamedical.com.au"
+                        href="mailto:info@lenamedical.com.au"
                         className="text-[rgb(12,122,136)] font-medium hover:text-[#e9762b] transition-colors duration-200"
                       >
-                        reception@lenamedical.com.au
+                        info@lenamedical.com.au
                       </a>
                     </div>
                     <div className="flex items-center gap-2">
                       <svg className="h-4 w-4 text-[#e9762b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      <span className="font-medium">(03) 9999 9999</span>
+                      <span className="font-medium">0461 562 706</span>
                     </div>
                   </div>
                 </div>
