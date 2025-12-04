@@ -392,10 +392,6 @@ export default function Home() {
               a: "You don&apos;t necessarily need to be an existing patient, but eligibility and availability may depend on your location and the type of support you&apos;re seeking."
             },
             {
-              q: "Is LENA Leaf bulk-billed?",
-              a: "Bulk-billing and fees depend on your eligibility and the type of consult. The booking journey will clearly show any costs before you confirm your appointment."
-            },
-            {
               q: "What do I need for my telehealth appointment?",
               a: "You&apos;ll need a quiet, private space, a reliable internet connection and a device with a camera and microphone, such as a smartphone, tablet or computer."
             }
@@ -410,16 +406,13 @@ export default function Home() {
               />
 
               <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold text-[rgb(12,122,136)]">
-                <span
-                  className="pr-4 leading-snug"
-                  style={idx === 1 ? { color: "#e9762b" } : undefined}
-                >
+                <span className="pr-4 leading-snug">
                   {item.q}
                 </span>
                 <span
                   className="ml-auto inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-xs font-semibold text-white shadow-sm transition-transform duration-150 group-open:rotate-45"
                   style={{
-                    backgroundColor: idx === 1 ? "#e9762b" : "#19b4bc",
+                    backgroundColor: "#19b4bc",
                     borderColor: "#ffffff",
                   }}
                 >
