@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Explore LENA Leaf telehealth services including herbal medicine, sleep support, chronic illness care, stress and anxiety, digestive health and nutritional therapy.",
+        "Explore LENA Leaf telehealth services including herbal medicine, sleep support, chronic illness care, and stress and anxiety.",
     },
   ];
 }
@@ -476,21 +476,7 @@ const services = [
     description:
       "Natural approaches to managing stress, anxiety and mood disorders through holistic therapies.",
     points: ["Mindfulness techniques", "Herbal anxiolytics", "Lifestyle counselling"],
-    accent: "amber",
-  },
-  {
-    name: "Digestive Health",
-    description:
-      "Gentle, evidence-based natural remedies for digestive health, intolerances and sensitivities.",
-    points: ["Gut microbiome support", "Elimination diets", "Herbal therapeutics"],
     accent: "teal",
-  },
-  {
-    name: "Nutritional Therapy",
-    description:
-      "Personalised nutrition plans using whole foods and targeted supplements for optimal health.",
-    points: ["Nutrient testing", "Meal planning", "Supplement protocols"],
-    accent: "orange",
   },
 ] as const;
 
@@ -623,12 +609,12 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-2">
           {services.map((service) => {
             const borderColor =
               service.accent === "teal"
                 ? "#19b4bc"
-                : (service.accent === "orange" || service.accent === "rose" || service.accent === "amber")
+                : (service.accent === "orange" || service.accent === "rose")
                 ? "#e9762b"
                 : "#f59e0b";
 
@@ -657,9 +643,7 @@ export default function Services() {
                         {service.name === "Herbal Medicine" ? "cannabis" :
                          service.name === "Sleep Disorders" ? "bedtime" :
                          service.name === "Chronic Illness" ? "cardiology" :
-                         service.name === "Stress & Anxiety" ? "self_improvement" :
-                         service.name === "Digestive Health" ? "no_food" :
-                         service.name === "Nutritional Therapy" ? "nutrition" : "health_and_safety"}
+                         service.name === "Stress & Anxiety" ? "self_improvement" : "health_and_safety"}
                       </span>
                     </div>
                     <h3
