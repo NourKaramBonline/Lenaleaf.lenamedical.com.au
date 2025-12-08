@@ -1,4 +1,5 @@
 import type { Route } from "./+types/contact";
+import { useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,6 +13,63 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    topic: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/contact-handler.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData).toString()
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        setSubmitMessage(result.message);
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          topic: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage(result.message);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setSubmitMessage('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <main className="min-h-screen text-slate-900" style={{ background: "radial-gradient(circle at top left, rgba(25,180,188,0.16), transparent 55%), radial-gradient(circle at bottom right, rgba(233,118,43,0.16), transparent 55%), linear-gradient(135deg, #f4fbfc, #fdf7f2)" }}>
       <section className="px-6 pt-10 pb-12 mx-auto max-w-7xl lg:pt-14 lg:pb-16">
@@ -132,15 +190,18 @@ export default function Contact() {
                   </p>
                 </div>
 
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div className="group relative">
                       <input
                         id="name"
                         name="name"
                         type="text"
+                        value={formData.name}
+                        onChange={handleInputChange}
                         className="peer block w-full rounded-2xl border-2 border-slate-200/60 bg-white/50 px-4 py-4 text-sm text-[#19b4bc] backdrop-blur-sm transition-all duration-200 placeholder:text-transparent focus:border-[#19b4bc] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#19b4bc]/10"
                         placeholder="Your name"
+                        required
                       />
                       <label
                         htmlFor="name"
@@ -154,8 +215,11 @@ export default function Contact() {
                         id="email"
                         name="email"
                         type="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
                         className="peer block w-full rounded-2xl border-2 border-slate-200/60 bg-white/50 px-4 py-4 text-sm text-[#19b4bc] backdrop-blur-sm transition-all duration-200 placeholder:text-transparent focus:border-[#19b4bc] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#19b4bc]/10"
                         placeholder="you@example.com"
+                        required
                       />
                       <label
                         htmlFor="email"
@@ -172,6 +236,8 @@ export default function Contact() {
                         id="phone"
                         name="phone"
                         type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                         className="peer block w-full rounded-2xl border-2 border-slate-200/60 bg-white/50 px-4 py-4 text-sm text-[#19b4bc] backdrop-blur-sm transition-all duration-200 placeholder:text-transparent focus:border-[#19b4bc] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#19b4bc]/10"
                         placeholder="Best contact number"
                       />
@@ -186,8 +252,10 @@ export default function Contact() {
                       <select
                         id="topic"
                         name="topic"
+                        value={formData.topic}
+                        onChange={handleInputChange}
                         className="peer block w-full rounded-2xl border-2 border-slate-200/60 bg-white/50 px-4 py-4 text-sm text-slate-400 backdrop-blur-sm transition-all duration-200 focus:border-[#19b4bc] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#19b4bc]/10"
-                        defaultValue=""
+                        required
                       >
                         <option value="" disabled hidden>What is your enquiry about?</option>
                         <option value="eligibility">Eligibility</option>
@@ -209,8 +277,11 @@ export default function Contact() {
                       id="message"
                       name="message"
                       rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
                       className="peer block w-full rounded-2xl border-2 border-slate-200/60 bg-white/50 px-4 py-4 text-sm text-[#19b4bc] backdrop-blur-sm transition-all duration-200 placeholder:text-transparent focus:border-[#19b4bc] focus:bg-white focus:outline-none focus:ring-4 focus:ring-[#19b4bc]/10 resize-none"
                       placeholder="Share any details you're comfortable with. Please don't include urgent medical concerns – call 000 in an emergency."
+                      required
                     />
                     <label
                       htmlFor="message"
@@ -231,16 +302,55 @@ export default function Contact() {
                     </div>
                   </div>
 
+                  {/* Status Message */}
+                  {submitStatus !== 'idle' && (
+                    <div className={`rounded-2xl p-4 ${
+                      submitStatus === 'success' 
+                        ? 'bg-green-50/50 border border-green-200/50' 
+                        : 'bg-red-50/50 border border-red-200/50'
+                    }`}>
+                      <div className="flex items-start gap-3">
+                        <svg className={`h-5 w-5 mt-0.5 flex-shrink-0 ${
+                          submitStatus === 'success' ? 'text-green-600' : 'text-red-600'
+                        }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          {submitStatus === 'success' ? (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          ) : (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          )}
+                        </svg>
+                        <p className={`text-sm ${
+                          submitStatus === 'success' ? 'text-green-800' : 'text-red-800'
+                        }`}>
+                          {submitMessage}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="flex justify-center pt-2">
                     <button
                       type="submit"
-                      className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#19b4bc] to-[#19b4bc]/90 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:from-[#19b4bc]/90 hover:to-[#19b4bc] focus:outline-none focus:ring-4 focus:ring-[#19b4bc]/20 cursor-pointer"
+                      disabled={isSubmitting}
+                      className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#19b4bc] to-[#19b4bc]/90 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:from-[#19b4bc]/90 hover:to-[#19b4bc] focus:outline-none focus:ring-4 focus:ring-[#19b4bc]/20 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                      <svg className="h-5 w-5 transition-transform duration-200 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                      Send message
+                      {isSubmitting ? (
+                        <>
+                          <svg className="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                          </svg>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <svg className="h-5 w-5 transition-transform duration-200 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                          </svg>
+                          Send message
+                        </>
+                      )}
                     </button>
                   </div>
                 </form>
